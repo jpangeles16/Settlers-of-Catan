@@ -19,31 +19,27 @@ abstract class Building {
 //    /** Collect resources from each of my adjacent settlements. */
 //    abstract void collect();
 
-//    /** A building must be placed onto POSN on HEX.
-//     *
-//     * Once we place the building on HEX,
-//     *
-//     * Raises an assertion error if we place a building on a position that
-//     * already contains a building.
-//     *
-//     * @param hex The id of the hex in which we put this building on.
-//     *
-//     * @param posn 0 - 5, where 0 is position north, 1 is northwest, etc
-//     *             (see _adjBuildings in Hex for more details)
-//     */
-//    Building(char color, int hex, int posn) {
-//
-//    }
-//
-//    /** Places a building onto POSN on HEX. This time hex is an actual hex obj. */
-//    Building(char color, Hex hex, int posn) {
-//        hex.addBuilding(posn, this);
-//    }
-
-    /** As soon as
-    void addAdjHex() {
-
+    /** Places me on HEX on position POSN. Also sets my adjacent hexes
+     * appropriately
+     * @param hex Hex to place me on
+     * @param posn Position to place me on on hex
+     */
+    void placeOn(Hex hex, int posn) {
+        hex.addBuilding(posn, this);
+        storeHexes(hex, posn);
     }
+
+    /** Assumes placeOn has been called. Stores the hex's adjacent hexes
+     * on POSN. */
+    private void storeHexes(Hex hex, int posn) {
+        _adjHexes = hex.adjacentHexes(posn);
+    }
+
+    /** Returns an ArrayList of hexes that I am next to. */
+    ArrayList<Hex> adjHexes() {
+        return _adjHexes;
+    }
+
 
     /** Marks me as placed or not. */
     void setPlacedTo(boolean placed) {
@@ -56,7 +52,7 @@ abstract class Building {
     }
 
     /** Set of hexes that I am adjacent to. */
-    private ArrayList<Hex> _adjHexes = new ArrayList<>(3);
+    private ArrayList<Hex> _adjHexes;
 
     /** True if I am placed on the board, false otherwise. */
     private boolean _placed;

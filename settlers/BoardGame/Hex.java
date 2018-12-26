@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /** Represents a hex.  Each hex contains six edges and six points
  * where each edge can contain a road, and each point can contain a settlement.
  *
@@ -88,7 +90,6 @@ class Hex {
     /** ===== Set of functions that set hexes to be adjacent to me. =====
      * Every time I successfully call this function, it will automatically set
      * HEX to be adjacent to me, and HEX will have me be adjacent to it as well.
-     *
      * @param hex The hex that will be adjacent to me.
      */
     void setNorthEast(Hex hex) {
@@ -184,6 +185,29 @@ class Hex {
         }
     }
 
+    /** Returns an ArrayList of hexes adjacent to POSN, including me. */
+    ArrayList<Hex> adjacentHexes(int posn) {
+        ArrayList<Hex> answer = new ArrayList<>();
+        answer.add(this);
+        int[] adj = ADJACENT_HEXES[posn];
+        int hex1 = adj[0];
+        int hex2 = adj[1];
+        if (_adjHexes[hex1] != null) {
+            answer.add(_adjHexes[hex1]);
+        }
+        if (_adjHexes[hex2] != null) {
+            answer.add(_adjHexes[hex2]);
+        }
+        return answer;
+    }
+
+    /** Removes BUILDING from POSN. This also removes building from my other
+     * adjacent hexes.
+     */
+    void removeBuilding(int posn, Building building) {
+
+    }
+
     /** Returns true if I have a road on SIDE.
      * @param side Index 0 = northeast side
      *             Index 1 = east side
@@ -224,7 +248,6 @@ class Hex {
      * for testing or sanity purposes.
      *
      * @return A visual representation of me.
-     *
      */
     public String dump() {
         String[] buildings = new String[6];

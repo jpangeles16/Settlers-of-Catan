@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddcac568-4023-48ea-9725-1715a4d8c85e" name="Default Changelist" comment="" />
+    <list default="true" id="ddcac568-4023-48ea-9725-1715a4d8c85e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BoardGame/BuildingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Building.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/Hex.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Hex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/HexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/HexTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/settlers/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Building.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/settlers/Hex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Hex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/settlers/HexTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/HexTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/settlers/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Player.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +63,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2570" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2570" />
         </counts>
       </usages-collector>
     </session>
@@ -84,19 +95,41 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
+        <entry file="file://$PROJECT_DIR$/BoardGame/Building.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4611">
-              <caret line="175" column="9" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
+            <state relative-caret-position="205">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <folding>
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1029#1030#0" expanded="true" />
+                <element signature="e#1161#1162#0" expanded="true" />
+                <element signature="e#1193#1194#0" expanded="true" />
+                <element signature="e#1409#1410#0" expanded="true" />
+                <element signature="e#1441#1442#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="e#1535#1536#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BoardGame/BuildingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoardGame/Building.java">
+        <entry file="file://$PROJECT_DIR$/BoardGame/EdgeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state>
+              <caret column="22" selection-end-line="1" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -104,17 +137,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-9">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="163" column="76" selection-start-line="163" selection-start-column="76" selection-end-line="163" selection-end-column="76" />
+              <folding>
+                <element signature="e#1534#1535#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1872#1873#0" expanded="true" />
+                <element signature="e#1907#1908#0" expanded="true" />
+                <element signature="e#1925#1926#0" expanded="true" />
+                <element signature="e#1960#1961#0" expanded="true" />
+                <element signature="e#1983#1984#0" expanded="true" />
+                <element signature="e#2018#2019#0" expanded="true" />
+                <element signature="e#2041#2042#0" expanded="true" />
+                <element signature="e#2076#2077#0" expanded="true" />
+                <element signature="e#2094#2095#0" expanded="true" />
+                <element signature="e#2129#2130#0" expanded="true" />
+                <element signature="e#2152#2153#0" expanded="true" />
+                <element signature="e#2187#2188#0" expanded="true" />
+                <element signature="e#4082#4083#0" expanded="true" />
+                <element signature="e#4128#4129#0" expanded="true" />
+                <element signature="e#7739#7740#0" expanded="true" />
+                <element signature="e#7774#7775#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardGame/HexTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state relative-caret-position="540">
+              <caret line="45" column="32" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="45" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,11 +233,12 @@
         <option value="$PROJECT_DIR$/src/HexTest.java" />
         <option value="$PROJECT_DIR$/src/Hex.java" />
         <option value="$PROJECT_DIR$/BoardGame/Robber.java" />
-        <option value="$PROJECT_DIR$/BoardGame/Hex.java" />
         <option value="$PROJECT_DIR$/BoardGame/Road.java" />
         <option value="$PROJECT_DIR$/BoardGame/Player.java" />
-        <option value="$PROJECT_DIR$/BoardGame/Building.java" />
         <option value="$PROJECT_DIR$/BoardGame/HexTest.java" />
+        <option value="$PROJECT_DIR$/BoardGame/Hex.java" />
+        <option value="$PROJECT_DIR$/BoardGame/Building.java" />
+        <option value="$PROJECT_DIR$/BoardGame/BuildingTest.java" />
       </list>
     </option>
   </component>
@@ -216,7 +279,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545791793688" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545818189475" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -234,7 +297,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HexTest">
+  <component name="RunManager" selected="JUnit.BuildingTest.adjacencyTest">
+    <configuration name="BuildingTest.adjacencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="settlers" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BuildingTest" />
+      <option name="METHOD_NAME" value="adjacencyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="settlers" />
       <option name="PACKAGE_NAME" value="" />
@@ -243,31 +316,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HexTest.dumpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HexTest.addBuildingTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="settlers" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HexTest" />
-      <option name="METHOD_NAME" value="dumpTest" />
+      <option name="METHOD_NAME" value="addBuildingTest3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HexTest.placeRoadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HexTest.adjacentHexesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="settlers" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HexTest" />
-      <option name="METHOD_NAME" value="placeRoadTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HexTest.placeRoadTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="settlers" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HexTest" />
-      <option name="METHOD_NAME" value="placeRoadTest2" />
+      <option name="METHOD_NAME" value="adjacentHexesTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -284,19 +347,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.HexTest.dumpTest" />
-      <item itemvalue="JUnit.HexTest.placeRoadTest" />
-      <item itemvalue="JUnit.HexTest.placeRoadTest2" />
       <item itemvalue="JUnit.HexTest.placeRoadTest3" />
       <item itemvalue="JUnit.HexTest" />
+      <item itemvalue="JUnit.HexTest.adjacentHexesTest" />
+      <item itemvalue="JUnit.HexTest.addBuildingTest3" />
+      <item itemvalue="JUnit.BuildingTest.adjacencyTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuildingTest.adjacencyTest" />
+        <item itemvalue="JUnit.HexTest.addBuildingTest3" />
+        <item itemvalue="JUnit.HexTest.adjacentHexesTest" />
         <item itemvalue="JUnit.HexTest" />
         <item itemvalue="JUnit.HexTest.placeRoadTest3" />
-        <item itemvalue="JUnit.HexTest.placeRoadTest2" />
-        <item itemvalue="JUnit.HexTest.placeRoadTest" />
-        <item itemvalue="JUnit.HexTest.dumpTest" />
       </list>
     </recent_temporary>
   </component>
@@ -314,41 +377,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HexTest_placeRoadTest2 - 2018.12.25 at 16h 04m 02s.xml">
-      <configuration name="HexTest.placeRoadTest2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HexTest_placeRoadTest2 - 2018.12.25 at 16h 04m 08s.xml">
-      <configuration name="HexTest.placeRoadTest2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HexTest_placeRoadTest2 - 2018.12.25 at 16h 05m 09s.xml">
-      <configuration name="HexTest.placeRoadTest2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HexTest_placeRoadTest3 - 2018.12.25 at 16h 26m 10s.xml">
-      <configuration name="HexTest.placeRoadTest3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HexTest_placeRoadTest3 - 2018.12.25 at 16h 27m 08s.xml">
-      <configuration name="HexTest.placeRoadTest3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HexTest_placeRoadTest3 - 2018.12.25 at 16h 28m 09s.xml">
-      <configuration name="HexTest.placeRoadTest3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HexTest_placeRoadTest3 - 2018.12.25 at 16h 29m 21s.xml">
-      <configuration name="HexTest.placeRoadTest3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HexTest_placeRoadTest3 - 2018.12.25 at 16h 30m 18s.xml">
-      <configuration name="HexTest.placeRoadTest3" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HexTest_placeRoadTest3 - 2018.12.25 at 16h 30m 36s.xml">
       <configuration name="HexTest.placeRoadTest3" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HexTest - 2018.12.25 at 18h 32m 31s.xml">
       <configuration name="HexTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HexTest_adjacentHexesTest - 2018.12.26 at 01h 18m 08s.xml">
+      <configuration name="HexTest.adjacentHexesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HexTest_adjacentHexesTest - 2018.12.26 at 01h 18m 19s.xml">
+      <configuration name="HexTest.adjacentHexesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HexTest_adjacentHexesTest - 2018.12.26 at 01h 19m 28s.xml">
+      <configuration name="HexTest.adjacentHexesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HexTest_adjacentHexesTest - 2018.12.26 at 01h 22m 45s.xml">
+      <configuration name="HexTest.adjacentHexesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HexTest_adjacentHexesTest - 2018.12.26 at 01h 24m 40s.xml">
+      <configuration name="HexTest.adjacentHexesTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HexTest_addBuildingTest3 - 2018.12.26 at 01h 24m 40s.xml">
+      <configuration name="HexTest.addBuildingTest3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BuildingTest_adjacencyTest - 2018.12.26 at 01h 35m 01s.xml">
+      <configuration name="BuildingTest.adjacencyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BuildingTest_adjacencyTest - 2018.12.26 at 01h 36m 04s.xml">
+      <configuration name="BuildingTest.adjacencyTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19957082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -357,8 +421,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5120482" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39518073" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36626506" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -378,38 +442,56 @@
       <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.0" />
     </layout>
     <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19670959" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.36506024" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Style Checker" order="4" weight="0.30843374" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.5975904" />
-      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.5120482" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.0" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5120482" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Style Checker" order="8" weight="0.30843374" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.36506024" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.0" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGame/HexTest.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGame/BuildingTest.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/cs61b-software/lib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
@@ -481,16 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/EdgeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/City.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -543,24 +615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4611">
-          <caret line="175" column="9" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -579,17 +637,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Building.java">
+    <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="143">
+          <caret line="163" column="76" selection-start-line="163" selection-start-column="76" selection-end-line="163" selection-end-column="76" />
+          <folding>
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1872#1873#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#1960#1961#0" expanded="true" />
+            <element signature="e#1983#1984#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="true" />
+            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="e#2076#2077#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2129#2130#0" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2187#2188#0" expanded="true" />
+            <element signature="e#4082#4083#0" expanded="true" />
+            <element signature="e#4128#4129#0" expanded="true" />
+            <element signature="e#7739#7740#0" expanded="true" />
+            <element signature="e#7774#7775#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/HexTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="540">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/EdgeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/Building.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/BuildingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
