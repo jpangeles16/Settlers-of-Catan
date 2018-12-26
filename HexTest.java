@@ -1,4 +1,7 @@
 import org.junit.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 /** Set of tests for the hex class.
@@ -128,6 +131,17 @@ public class HexTest {
         System.out.println(hex2.dump());
         System.out.println(hex3.dump());
         assertTrue(hex3.getRoad(3) != hex3.getRoad(2));
+    }
+
+    @Test
+    public void adjacentHexesTest() {
+        Hex hex1 = new Hex(1, 10);
+        Hex hex2 = new Hex(2, 10);
+        ArrayList<Hex> adj = hex1.adjacentHexes(0);
+        assertEquals("[Hex 1]", adj.toString());
+        hex1.setNorthEast(hex2);
+        ArrayList<Hex> adj2 = hex1.adjacentHexes(0);
+        assertEquals("[Hex 1, Hex 2]", adj2.toString());
     }
 
     @Test
