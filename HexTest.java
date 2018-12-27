@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 /** Set of tests for the hex class.
  * Also tests a little bit of the Building class and its
  * subclasses.
- *
  * @author John Angeles
  */
 public class HexTest {
@@ -142,6 +141,19 @@ public class HexTest {
         hex1.setNorthEast(hex2);
         ArrayList<Hex> adj2 = hex1.adjacentHexes(0);
         assertEquals("[Hex 1, Hex 2]", adj2.toString());
+    }
+
+    @Test
+    public void resourceTest() {
+        Hex hex1 = new Hex(1, 10);
+        hex1.setResource(Resource.Brick());
+        Hex hex2 = new Hex(2, 11);
+        hex2.setResource(Resource.Brick());
+        Hex hex3 = new Hex(3, 12);
+        hex3.setResource(Resource.Brick());
+        assertEquals(Resource.Brick(), hex1.resource());
+        assertEquals("Invalid resources!", hex1.resource(), hex2.resource());
+        assertEquals("Invalid resources!", hex1.resource(), hex3.resource());
     }
 
     @Test

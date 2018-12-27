@@ -8,6 +8,12 @@ import java.util.Stack;
  * then the player is able to take back the settlement
  * to use again.
  *
+ * A player wins the game by having 10 victory points.
+ *
+ * Unlike the other classes, the player cannot place
+ * buildings and roads onto a hex unless he or she expends resource
+ * cards.
+ *
  * @author John Angeles
  */
 public class Player {
@@ -34,6 +40,11 @@ public class Player {
             _cities.push(new City(_color));
         }
     }
+
+    /** Places the
+
+    /** Current victory points that I have. */
+    private int _victoryPoints;
 
     /** Roads that I haven't placed yet. */
     private Stack<Road> _roads = new Stack<>();

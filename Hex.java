@@ -5,8 +5,8 @@ import java.util.ArrayList;
  *
  * Each hex is designated a random number generated from 2 to 12.
  *
- * Each hex can have a random resource. Any resource can be sheep, ore,
- * logs, bricks, and wheat.
+ * Each hex is designated a random resource. A resource is either wood, brick,
+ * wheat, ore, or sheep.
  *
  * Each hex must have adjacent hexes. This means that hexes act like linked lists.
  *
@@ -40,6 +40,17 @@ class Hex {
     /** Returns my id. */
     int id() {
         return _id;
+    }
+
+    /** Sets me to produce RESOURCE. */
+    void setResource(Resource resource) {
+        _resource = resource;
+    }
+
+    /** Returns my current resource, but errors if I don't have one set. */
+    Resource resource() {
+        assert _resource != null : "I have no resource set!";
+        return _resource;
     }
 
     /** ===== Set of functions that return hexes adjacent to me. =====
@@ -321,6 +332,9 @@ class Hex {
 
     /** Returns my numeric value. */
     private int _number;
+
+    /** My resource that I produce. */
+    private Resource _resource;
 
     /** Returns true if I have the robber on me. */
     private boolean _hasRobber;
