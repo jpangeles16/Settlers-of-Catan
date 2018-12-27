@@ -8,7 +8,8 @@ import java.util.ArrayList;
  * Each hex is designated a random resource. A resource is either wood, brick,
  * wheat, ore, or sheep.
  *
- * Each hex must have adjacent hexes. This means that hexes act like linked lists.
+ * Each hex must have adjacent hexes. This means that hexes act
+ * like linked lists.
  *
  * There are 19 hexes total in a regular Settlers game.
  *
@@ -32,7 +33,7 @@ class Hex {
      *           while the very last hex (bottom right) has index 18.
      */
     Hex(int id, int number) {
-        assert 2 <= number && number <= 12: "Invalid number!";
+        assert 2 <= number && number <= 12 : "Invalid number!";
         _id = id;
         _number = number;
     }

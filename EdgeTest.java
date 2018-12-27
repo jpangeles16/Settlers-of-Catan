@@ -8,7 +8,7 @@ public class EdgeTest {
 
     @Test
     public void toStringTest() {
-        Road road = new Road(Color.Red());
+        Road road = new Road(Color.red());
         System.out.println(road);
         assertEquals("R", road.toString());
     }

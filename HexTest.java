@@ -55,7 +55,7 @@ public class HexTest {
     @Test
     public void addBuildingTest() {
         Hex hex1 = new Hex(1, 2);
-        Building building = new Settlement(Color.Black());
+        Building building = new Settlement(Color.black());
         hex1.addBuilding(0, building);
         System.out.println(hex1.dump());
         assertTrue(hex1.hasBuilding(0));
@@ -66,7 +66,7 @@ public class HexTest {
         Hex hex1 = new Hex(1, 2);
         Hex hex2 = new Hex(2, 3);
         hex1.setSouthWest(hex2);
-        hex1.addBuilding(4, new Settlement(Color.Black()));
+        hex1.addBuilding(4, new Settlement(Color.black()));
         assertTrue(hex1.hasBuilding(4));
         assertTrue(hex2.hasBuilding(0));
     }
@@ -79,7 +79,7 @@ public class HexTest {
         hex1.setNorthWest(hex3);
         hex1.setWest(hex2);
         hex2.setNorthEast(hex3);
-        hex1.addBuilding(5, new Settlement(Color.Black()));
+        hex1.addBuilding(5, new Settlement(Color.black()));
         System.out.println(hex2.dump());
         System.out.println(hex3.dump());
         assertTrue(hex1.hasBuilding(5));
@@ -91,8 +91,8 @@ public class HexTest {
     public void placeRoadTest() {
         Hex hex1 = new Hex(1, 10);
         assertFalse(hex1.hasRoad(1));
-        hex1.placeRoad(new Road(Color.Red()), 1);
-        hex1.placeRoad(new Road(Color.Red()), 0);
+        hex1.placeRoad(new Road(Color.red()), 1);
+        hex1.placeRoad(new Road(Color.red()), 0);
         assertTrue(hex1.hasRoad(1));
         assertTrue(hex1.hasRoad(0));
         System.out.println(hex1.dump());
@@ -103,7 +103,7 @@ public class HexTest {
         Hex hex1 = new Hex(1, 10);
         Hex hex2 = new Hex(2, 11);
         hex1.setEast(hex2);
-        hex1.placeRoad(new Road(Color.Red()), 1);
+        hex1.placeRoad(new Road(Color.red()), 1);
         assertTrue(hex1.hasRoad(1));
         assertTrue(hex2.hasRoad(4));
         System.out.println(hex1.dump() + "\n" + hex2.dump());
@@ -117,8 +117,8 @@ public class HexTest {
         hex1.setEast(hex2);
         hex1.setNorthEast(hex3);
         hex3.setSouthEast(hex2);
-        Road road1 = new Road(Color.Red());
-        Road road2 = new Road(Color.Red());
+        Road road1 = new Road(Color.red());
+        Road road2 = new Road(Color.red());
         hex1.placeRoad(road1, 0);
         hex2.placeRoad(road2, 5);
         assertTrue(hex1.hasRoad(0));
@@ -146,12 +146,12 @@ public class HexTest {
     @Test
     public void resourceTest() {
         Hex hex1 = new Hex(1, 10);
-        hex1.setResource(Resource.Brick());
+        hex1.setResource(Resource.brick());
         Hex hex2 = new Hex(2, 11);
-        hex2.setResource(Resource.Brick());
+        hex2.setResource(Resource.brick());
         Hex hex3 = new Hex(3, 12);
-        hex3.setResource(Resource.Brick());
-        assertEquals(Resource.Brick(), hex1.resource());
+        hex3.setResource(Resource.brick());
+        assertEquals(Resource.brick(), hex1.resource());
         assertEquals("Invalid resources!", hex1.resource(), hex2.resource());
         assertEquals("Invalid resources!", hex1.resource(), hex3.resource());
     }
@@ -159,8 +159,8 @@ public class HexTest {
     @Test
     public void dumpTest() {
         Hex hex1 = new Hex(1, 2);
-        hex1.addBuilding(0, new Settlement(Color.Black()));
-        hex1.addBuilding(2, new City(Color.White()));
+        hex1.addBuilding(0, new Settlement(Color.black()));
+        hex1.addBuilding(2, new City(Color.white()));
         System.out.println(hex1.dump());
     }
 

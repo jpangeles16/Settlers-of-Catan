@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 /** The game board that consists of 19 hexes.
  * There is only one board in the game.
  * The board is setup like any other Catan game.
@@ -10,6 +12,8 @@ class Board {
      * of the circle.
      */
     static void generateBoard() {
+        LinkedList<Resource> resources = new LinkedList<>();
+
 
     }
 
@@ -20,6 +24,43 @@ class Board {
         return (int) Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+    /** List of all resources in the game.
+     * In a typical board, there are:
+     * 4 wood hexes
+     * 4 wheat hexes
+     * 4 sheep hexes
+     * 3 brick hexes
+     * 3 ore hexes
+     * 1 desert hex
+     */
+    private static LinkedList<Resource> RESOURCES
+            = new LinkedList<>();
+
+    /** Sets up our RESOURCES list. */
+    static {
+        for (int i = 0; i < 4; i += 1) {
+            RESOURCES.add(Resource.wood());
+        }
+
+        for (int i = 0; i < 4; i += 1) {
+            RESOURCES.add(Resource.wheat());
+        }
+
+        for (int i = 0; i < 4; i += 1) {
+            RESOURCES.add(Resource.sheep());
+        }
+
+        for (int i = 0; i < 3; i += 1) {
+            RESOURCES.add(Resource.brick());
+        }
+
+        for (int i = 0; i < 3; i += 1) {
+            RESOURCES.add(Resource.ore());
+        }
+
+    }
+
+
     /** The tokens. There are 18 tokens listed alphabetically
      * in increasing order. For example, index one gives
      * the token A.
@@ -28,6 +69,10 @@ class Board {
      * In the following list, I have the index to the
      * very left column, followed by the proper probability
      * numbers in the very right.
+     *
+     * Credit: https://boardgames.stackexchange.com/questions
+     * /2740/distribution-of-tokens-in-standard-4-player-catan
+     *
      * 00, A = 5
      * 01, B = 2
      * 02, C = 6
@@ -49,6 +94,7 @@ class Board {
     private int[] _tokens
             = new int[] {5, 2, 6, 3, 8, 10, 9, 12, 11,
             4, 8, 10, 9, 4, 5, 6, 3, 11};
+
 
 
 }

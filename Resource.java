@@ -7,30 +7,30 @@ class Resource {
     /** Resource cannot be instantiated; call
      * the static constructors instead.
      */
-    private Resource() {}
+    private Resource() { }
 
     /** === Set of static functions that return resources. */
-    static Resource Wood() {
+    static Resource wood() {
         return RESOURCES[0];
     }
 
-    static Resource Brick() {
+    static Resource brick() {
         return RESOURCES[1];
     }
 
-    static Resource Wheat() {
+    static Resource wheat() {
         return RESOURCES[2];
     }
 
-    static Resource Ore() {
+    static Resource ore() {
         return RESOURCES[3];
     }
 
-    static Resource Sheep() {
+    static Resource sheep() {
         return RESOURCES[4];
     }
 
-    static Resource Desert() {
+    static Resource desert() {
         return RESOURCES[5];
     }
 
@@ -66,24 +66,24 @@ class Resource {
     }
 
     /** Wood. Excellent for building roads and settlements. */
-    private static class Wood extends Resource {}
+    private static class Wood extends Resource { }
 
     /** Brick. Great for early game. */
-    private static class Brick extends Resource {}
+    private static class Brick extends Resource { }
 
     /** Wheat. A very versatile resource everyone wants. */
-    private static class Wheat extends Resource {}
+    private static class Wheat extends Resource { }
 
     /** Ore. This is a crucial late-game resource. */
-    private static class Ore extends Resource {}
+    private static class Ore extends Resource { }
 
     /** Sheep. Great to have from early to mid-game,
      * sometimes late-game. */
-    private static class Sheep extends Resource {}
+    private static class Sheep extends Resource { }
 
     /** Desert. Only a single hex and no cards may implement this.
      * Try not to settle next to this one.
      */
-    private static class Desert extends Resource {}
+    private static class Desert extends Resource { }
 
 }
