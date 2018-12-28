@@ -284,10 +284,15 @@ class Hex {
             number = "00" + String.valueOf(_number);
         }
 
+        String resource = " N/A ";
+        if (_resource != null) {
+            resource = _resource.toString();
+        }
+
         return    "      *" + buildings[0] + "*      \n"
                 + "     " + roads[5] + "     " + roads[0] + "     \n"
                 + "*" + buildings[5] + "* |" + number + "| *" + buildings[1] + "*\n"
-                + "  " + roads[4] + "          " + roads[1] + "  \n"
+                + "  " + roads[4] + "   " + resource + "   " + roads[1] + "  \n"
                 + "*" + buildings[4] + "* Hex" + id + " *" + buildings[2] + "*\n"
                 + "     " + roads[3] + "     " + roads[2] + "     \n"
                 + "      *" + buildings[3] + "*      ";

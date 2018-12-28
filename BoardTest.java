@@ -73,9 +73,8 @@ public class BoardTest {
     }
 
     @Test
-    public void resourceTest() {
-        Board.reset();
-
+    public void dumpTest() {
+        System.out.println(Board.dump());
     }
 
 }

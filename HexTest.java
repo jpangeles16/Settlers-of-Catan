@@ -126,6 +126,7 @@ public class HexTest {
         assertTrue(hex3.hasRoad(2));
         assertTrue(hex2.hasRoad(5));
         assertFalse(hex2.hasRoad(4));
+        hex3.placeRoad(new Road(Color.black()), 1);
         System.out.println(hex1.dump());
         System.out.println(hex2.dump());
         System.out.println(hex3.dump());

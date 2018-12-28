@@ -1,5 +1,4 @@
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.ArrayList;
 
 /** The game board that consists of 19 hexes.
@@ -91,7 +90,24 @@ class Board {
 
     /** Returns a string representation of the board. */
     public static String dump() {
-        return null;
+        String[] hex1, hex2, hex3;
+        ArrayList<String> lines = new ArrayList<>();
+        hex1 = BOARD[0].dump().split("\\n");
+        hex2 = BOARD[0].dump().split("\\n");
+        hex3 = BOARD[0].dump().split("\\n");
+
+        for (int i = 0; i < 5; i += 1) {
+            lines.add(hex1[i].substring(0, 12) + hex2[i].substring(0, 12)
+                    + hex3[i]);
+        }
+
+        String result = "";
+
+        for (int i = 0; i < lines.size(); i += 1) {
+            result = result.concat(lines.get(i) + "\n");
+        }
+
+        return result;
     }
 
     /** The board itself. Indexing returns a specific hex numbered from 1 to
