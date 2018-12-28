@@ -41,5 +41,41 @@ public class BoardTest {
         }
     }
 
+    @Test
+    public void trivialBoardTest() {
+        Hex[] board = Board.hexList();
+        Hex[] sameBoard = board;
+        assertSame(board, sameBoard);
+    }
+
+    @Test
+    public void axialCoordinatesTest() {
+        Hex[] board = Board.hexList();
+        assertTrue(board[0] == Board.get(0, -2));
+        assertTrue(board[1] == Board.get(1, -2));
+        assertTrue(board[2] == Board.get(2, -2));
+        assertTrue(board[3] == Board.get(-1, -1));
+        assertTrue(board[4] == Board.get(0, -1));
+        assertTrue(board[5] == Board.get(1, -1));
+        assertTrue(board[6] == Board.get(2, -1));
+        assertTrue(board[7] == Board.get(-2, 0));
+        assertTrue(board[8] == Board.get(-1, 0));
+        assertTrue(board[9] == Board.get(0, 0));
+        assertTrue(board[10] == Board.get(1, 0));
+        assertTrue(board[11] == Board.get(2, 0));
+        assertTrue(board[12] == Board.get(-2, 1));
+        assertTrue(board[13] == Board.get(-1, 1));
+        assertTrue(board[14] == Board.get(0, 1));
+        assertTrue(board[15] == Board.get(1, 1));
+        assertTrue(board[16] == Board.get(-2, 2));
+        assertTrue(board[17] == Board.get(-1, 2));
+        assertTrue(board[18] == Board.get(0, 2));
+    }
+
+    @Test
+    public void resourceTest() {
+        Board.reset();
+
+    }
 
 }

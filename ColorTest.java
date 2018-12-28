@@ -8,12 +8,12 @@ public class ColorTest {
 
     @Test
     public void instantiationTest() {
-        Color red = Color.Red();
-        Color red2 = Color.Red();
-        Color black = Color.Black();
-        Color black2 = Color.Black();
-        Color orange = Color.Orange();
-        Color orange2 = Color.Orange();
+        Color red = Color.red();
+        Color red2 = Color.red();
+        Color black = Color.black();
+        Color black2 = Color.black();
+        Color orange = Color.orange();
+        Color orange2 = Color.orange();
         assertTrue(red == red2);
         assertTrue(black == black2);
         assertTrue(orange == orange2);
@@ -21,7 +21,7 @@ public class ColorTest {
 
     @Test
     public void toStringTest() {
-        Color mystery = Color.White();
+        Color mystery = Color.white();
         assertEquals("W", mystery.toString());
     }
 }

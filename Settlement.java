@@ -11,11 +11,6 @@ class Settlement extends Building {
         super(color);
     }
 
-//    Settlement(char color, int hex, int posn) {
-//        super(color, hex, posn);
-//    }
-//
-//    Settlement(char color )
 
     @Override
     int victoryPoints() {
