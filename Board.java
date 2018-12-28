@@ -4,9 +4,22 @@ import java.util.ArrayList;
 /** The game board that consists of 19 hexes.
  * There is only one board in the game.
  * The board is setup like any other Catan game.
+ * Also contains some useful random functions.
  * @author John Angeles
  */
-class Board {
+final class Board {
+
+    /** Returns an integer either 0 or 1. */
+    static int coinFlip() {
+        return genRandom(0, 1);
+    }
+
+    /** Generates a random number between MIN and MAX, inclusive.
+     * Credit: https://www.w3schools.com/js/js_random.asp
+     */
+    static int genRandom(int min, int max) {
+        return (int) Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     /** You can't create a new board.
      * This is the only board; you must use the static methods provided.
@@ -39,53 +52,27 @@ class Board {
         }
     }
 
-    /** Either 0 or 1. */
-    static int coinFlip() {
-        return genRandom(0, 1);
-    }
-
-    /** Generates a random number between MIN and MAX.
-     * Credit: https://www.w3schools.com/js/js_random.asp
+    /** Distributes the tokens in a random fashion
+     * starting from the center of the board. Note that although the
+     * process in which we do so is random, there is a certain
+     * algorithm/mechanism that we always follow when we distribute
+     * the tokens.
      */
-    static int genRandom(int min, int max) {
-        return (int) Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    static void distributeTokens() {
+        boolean clockwise = true;
+        int currToken = 17;
 
-    /** List of all resources in the game.
-     * In a typical board, there are:
-     * 4 wood hexes
-     * 4 wheat hexes
-     * 4 sheep hexes
-     * 3 brick hexes
-     * 3 ore hexes
-     * 1 desert hex
-     */
-    static ArrayList<Resource> RESOURCES
-            = new ArrayList<>();
-
-    /** Sets up our RESOURCES list. */
-    static {
-        for (int i = 0; i < 4; i += 1) {
-            RESOURCES.add(Resource.wood());
+        if (coinFlip() == 0) {
+            clockwise = false;
         }
 
-        for (int i = 0; i < 4; i += 1) {
-            RESOURCES.add(Resource.wheat());
+        if (CENTER.resource() != Resource.desert()) {
+            CENTER.setNumber(_tokens[currToken]);
+            currToken -= 1;
         }
 
-        for (int i = 0; i < 4; i += 1) {
-            RESOURCES.add(Resource.sheep());
-        }
+        int currMiddle = genRandom(0, 5);
 
-        for (int i = 0; i < 3; i += 1) {
-            RESOURCES.add(Resource.brick());
-        }
-
-        for (int i = 0; i < 3; i += 1) {
-            RESOURCES.add(Resource.ore());
-        }
-
-        RESOURCES.add(Resource.desert());
     }
 
     /** Returns a string representation of the board. */
@@ -157,6 +144,43 @@ class Board {
         return result;
     }
 
+    /** List of all resources in the game.
+     * In a typical board, there are:
+     * 4 wood hexes
+     * 4 wheat hexes
+     * 4 sheep hexes
+     * 3 brick hexes
+     * 3 ore hexes
+     * 1 desert hex
+     */
+    static ArrayList<Resource> RESOURCES
+            = new ArrayList<>();
+
+    /** Sets up our RESOURCES list. */
+    static {
+        for (int i = 0; i < 4; i += 1) {
+            RESOURCES.add(Resource.wood());
+        }
+
+        for (int i = 0; i < 4; i += 1) {
+            RESOURCES.add(Resource.wheat());
+        }
+
+        for (int i = 0; i < 4; i += 1) {
+            RESOURCES.add(Resource.sheep());
+        }
+
+        for (int i = 0; i < 3; i += 1) {
+            RESOURCES.add(Resource.brick());
+        }
+
+        for (int i = 0; i < 3; i += 1) {
+            RESOURCES.add(Resource.ore());
+        }
+
+        RESOURCES.add(Resource.desert());
+    }
+
     /** The board itself. Indexing returns a specific hex numbered from 1 to
      * 19.
      */
@@ -170,7 +194,7 @@ class Board {
     }
 
     /** The tokens. There are 18 tokens listed alphabetically
-     * in increasing order. For example, index one gives
+     * in increasing order. For example, index 0 gives
      * the token A.
      * By indexing you return the unique probability number
      * associated with the token.
@@ -199,7 +223,7 @@ class Board {
      * 15, P = 6
      * 16, Q = 3
      * 17, R = 11. */
-    private int[] _tokens
+    private static final int[] _tokens
             = new int[] {5, 2, 6, 3, 8, 10, 9, 12, 11,
             4, 8, 10, 9, 4, 5, 6, 3, 11};
 
@@ -207,7 +231,7 @@ class Board {
      * coordinates.
      * Returns null if the hex doesn't exist.
      */
-    private static Hex[][] AXIAL
+    private static final Hex[][] AXIAL
             = new Hex[][] { {null, null, BOARD[7], BOARD[12], BOARD[16]},
                     {null, BOARD[3], BOARD[8], BOARD[13], BOARD[17]},
                     {BOARD[0], BOARD[4], BOARD[9], BOARD[14], BOARD[18]},
@@ -215,12 +239,13 @@ class Board {
                     {BOARD[2], BOARD[6], BOARD[11], null, null} };
 
     /** The centermost hex. */
-    private static Hex CENTER = get(0, 0);
+    private static final Hex CENTER = get(0, 0);
 
     /** List of hexes one step away from the center, enumerated
-     * clockwise, starting from hex 5.
+     * clockwise, starting from hex 5. Keep this in order!
      */
-    private static ArrayList<Hex> MIDDLE = new ArrayList<>(6);
+    private static final ArrayList<Hex> MIDDLE
+            = new ArrayList<>(6);
 
     /** Sets up MIDDLE. */
     static {
@@ -235,7 +260,8 @@ class Board {
     /** List of hexes two steps away from the center, enumerated
      * clockwise, starting from hex 1.
      */
-    private static ArrayList<Hex> OUTER = new ArrayList<>(12);
+    private static final ArrayList<Hex> OUTER
+            = new ArrayList<>(12);
 
     /** Sets up OUTER. */
     static {

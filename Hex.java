@@ -20,12 +20,16 @@ import java.util.ArrayList;
  * Lastly, each hex can potentially contain the robber.
  * @author John Angeles
  */
-class Hex {
+final class Hex {
 
     /** Generates me with a certain number.
-     * @param number Number that I have. Recall that a number
-     *               can go from 2 to 12.  Of course, the probability
-     *               of rolling a 2 is much lower than that of a 7.
+     * @param number Number that I have. When the
+     *               sum of the dice rolls is my number,
+     *               the settlements adjacent to me get my resource
+     *               if the robber is not on me.
+     *               Of course, the probability
+     *               of rolling a 2 is much lower
+     *               than that of a 7.
      *
      * @param id Each hex has a unique id. We will enumerate each hex starting
      *           from the top-left corner, and move from left to right and from
@@ -52,6 +56,16 @@ class Hex {
     Resource resource() {
         assert _resource != null : "I have no resource set!";
         return _resource;
+    }
+
+    /** Sets my number to be NUMBER. */
+    void setNumber(int number) {
+        _number = number;
+    }
+
+    /** Returns my number. */
+    int number() {
+        return _number;
     }
 
     /** ===== Set of functions that return hexes adjacent to me. =====

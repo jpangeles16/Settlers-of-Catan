@@ -11,7 +11,6 @@ class Settlement extends Building {
         super(color);
     }
 
-
     @Override
     int victoryPoints() {
         return 1;

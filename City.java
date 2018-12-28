@@ -19,7 +19,6 @@ final class City extends Settlement {
 
     @Override
     public String toString() {
-        //FIXME
         return "!" + _color.toString() + "!";
     }
 

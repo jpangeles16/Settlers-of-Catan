@@ -163,6 +163,9 @@ public class HexTest {
         hex1.addBuilding(0, new Settlement(Color.black()));
         hex1.addBuilding(2, new City(Color.white()));
         System.out.println(hex1.dump());
+        hex1.setNumber(5);
+        assertEquals(5, hex1.number());
+        System.out.println(hex1.dump());
     }
 
 }

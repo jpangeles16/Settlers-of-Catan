@@ -73,7 +73,16 @@ public class BoardTest {
     }
 
     @Test
+    public void coinFlipTest() {
+        for (int i = 0; i < 100; i += 1) {
+            int k = Board.coinFlip();
+            assertTrue(k == 0 || k == 1);
+        }
+    }
+
+    @Test
     public void dumpTest() {
+        Board.reset();
         System.out.println(Board.dump());
     }
 
