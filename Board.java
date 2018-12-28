@@ -91,14 +91,61 @@ class Board {
     /** Returns a string representation of the board. */
     public static String dump() {
         String[] hex1, hex2, hex3;
+        String sixBlanks = "      ";
         ArrayList<String> lines = new ArrayList<>();
         hex1 = BOARD[0].dump().split("\\n");
-        hex2 = BOARD[0].dump().split("\\n");
-        hex3 = BOARD[0].dump().split("\\n");
+        hex2 = BOARD[1].dump().split("\\n");
+        hex3 = BOARD[2].dump().split("\\n");
 
         for (int i = 0; i < 5; i += 1) {
-            lines.add(hex1[i].substring(0, 12) + hex2[i].substring(0, 12)
-                    + hex3[i]);
+            lines.add(sixBlanks + sixBlanks + hex1[i].substring(0, 12)
+                    + hex2[i].substring(0, 12) + hex3[i]);
+        }
+        String[] hex4, hex5, hex6, hex7;
+        hex4 = BOARD[3].dump().split("\\n");
+        hex5 = BOARD[4].dump().split("\\n");
+        hex6 = BOARD[5].dump().split("\\n");
+        hex7 = BOARD[6].dump().split("\\n");
+
+        for (int i = 1; i < 5; i += 1) {
+            lines.add(sixBlanks + hex4[i].substring(0, 12)
+                    + hex5[i].substring(0, 12) + hex6[i].substring(0, 12)
+                    + hex7[i]);
+        }
+
+        String[] hex8, hex9, hex10, hex11, hex12;
+        hex8 = BOARD[7].dump().split("\\n");
+        hex9 = BOARD[8].dump().split("\\n");
+        hex10 = BOARD[9].dump().split("\\n");
+        hex11 = BOARD[10].dump().split("\\n");
+        hex12 = BOARD[11].dump().split("\\n");
+
+        for (int i = 1; i < 5; i += 1) {
+            lines.add(hex8[i].substring(0, 12)
+                    + hex9[i].substring(0, 12) + hex10[i].substring(0, 12)
+                    + hex11[i].substring(0, 12) + hex12[i]);
+        }
+
+        String[] hex13, hex14, hex15, hex16;
+        hex13 = BOARD[12].dump().split("\\n");
+        hex14 = BOARD[13].dump().split("\\n");
+        hex15 = BOARD[14].dump().split("\\n");
+        hex16 = BOARD[15].dump().split("\\n");
+
+        for (int i = 1; i < 5; i += 1) {
+            lines.add(sixBlanks + hex13[i].substring(0, 12)
+                    + hex14[i].substring(0, 12) + hex15[i].substring(0, 12)
+                    + hex16[i]);
+        }
+
+        String[] hex17, hex18, hex19;
+        hex17 = BOARD[16].dump().split("\\n");
+        hex18 = BOARD[17].dump().split("\\n");
+        hex19 = BOARD[18].dump().split("\\n");
+
+        for (int i = 1; i < 7; i += 1) {
+            lines.add(sixBlanks + sixBlanks + hex17[i].substring(0, 12)
+                    + hex18[i].substring(0, 12) + hex19[i]);
         }
 
         String result = "";
