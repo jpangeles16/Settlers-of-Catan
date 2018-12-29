@@ -1,3 +1,6 @@
+import afu.org.checkerframework.checker.oigj.qual.O;
+import net.sf.saxon.expr.Component;
+
 import java.util.Collections;
 import java.util.ArrayList;
 
@@ -42,14 +45,20 @@ final class Board {
     }
 
     /** Generates the board with hexes numbered from 1 to 19.
-     * Also distributes probability tokens from the center
+     * It first randomly distributes the resources, then
+     * distributes probability tokens from the center
      * of the board.
+     * Finally, it sets the desert tile's number to be 0.
      */
     static void reset() {
         Collections.shuffle(RESOURCES);
         for (int i = 0; i < 19; i += 1) {
             BOARD[i].setResource(RESOURCES.get(i));
+            if (BOARD[i].resource() == DESERT) {
+                BOARD[i].setNumber(0);
+            }
         }
+        distributeTokens();
     }
 
     /** Distributes the tokens in a random fashion
@@ -66,13 +75,96 @@ final class Board {
             clockwise = false;
         }
 
-        if (CENTER.resource() != Resource.desert()) {
+        if (CENTER.resource() != DESERT) {
             CENTER.setNumber(_tokens[currToken]);
             currToken -= 1;
         }
 
         int currMiddle = genRandom(0, 5);
 
+
+        for (int i = 0; i < 6; i += 1) {
+            if (MIDDLE.get(currMiddle).resource() != DESERT) {
+                MIDDLE.get(currMiddle).setNumber(_tokens[currToken]);
+                currToken -= 1;
+            }
+            if (clockwise) {
+                currMiddle = (currMiddle + 1) % 6;
+            } else {
+                currMiddle -= 1;
+                if (currMiddle < 0) {
+                    currMiddle += 6;
+                }
+            }
+        }
+
+        Hex outerStarting;
+
+        if (clockwise) {
+            outerStarting
+                    = clockwiseOuter(MIDDLE.get(currMiddle));
+        } else {
+            outerStarting
+                    = counterClockwiseOuter(MIDDLE.get(currMiddle));
+        }
+
+        int currOuter = OUTER.indexOf(outerStarting);
+
+        for (int i = 0; i < 12; i += 1) {
+            if (OUTER.get(currOuter).resource() != DESERT) {
+                OUTER.get(currOuter).setNumber(_tokens[currToken]);
+                currToken -= 1;
+            }
+            if (clockwise) {
+                currOuter = (currOuter + 1) % 12;
+            } else {
+                currOuter -= 1;
+                if (currOuter < 0) {
+                    currOuter += 12;
+                }
+            }
+        }
+    }
+
+    /** Helper for distribute tokens. Returns the hex that
+     * follows after the middle hex.
+     */
+    private static Hex clockwiseOuter(Hex hex) {
+        assert MIDDLE.contains(hex) : "Invalid hex!";
+        if (hex == BOARD[4]) {
+            return BOARD[3];
+        } else if (hex == BOARD[5]) {
+            return BOARD[1];
+        } else if (hex == BOARD[10]) {
+            return BOARD[6];
+        } else if (hex == BOARD[14]) {
+            return BOARD[15];
+        } else if (hex == BOARD[13]) {
+            return BOARD[17];
+        } else {
+            return BOARD[12];
+        }
+    }
+
+    /** Helper for distribute tokens. Returns the hex that
+     * follows after the middle hex when we go counterclockwise
+     * while setting up the board.
+     */
+    private static Hex counterClockwiseOuter(Hex hex) {
+        assert MIDDLE.contains(hex) : "Invalid hex!";
+        if (hex == BOARD[4]) {
+            return BOARD[1];
+        } else if (hex == BOARD[5]) {
+            return BOARD[6];
+        } else if (hex == BOARD[10]) {
+            return BOARD[15];
+        } else if (hex == BOARD[14]) {
+            return BOARD[17];
+        } else if (hex == BOARD[13]) {
+            return BOARD[12];
+        } else {
+            return BOARD[3];
+        }
     }
 
     /** Returns a string representation of the board. */
@@ -249,7 +341,7 @@ final class Board {
 
     /** Sets up MIDDLE. */
     static {
-        MIDDLE.add(get(0, 0));
+        MIDDLE.add(get(0, -1));
         MIDDLE.add(get(1, -1));
         MIDDLE.add(get(1, 0));
         MIDDLE.add(get(0, 1));
@@ -278,5 +370,8 @@ final class Board {
         OUTER.add(get(-2, 0));
         OUTER.add(get(-1, -1));
     }
+
+    /** The resource Desert. */
+    private static Resource DESERT = Resource.desert();
 
 }

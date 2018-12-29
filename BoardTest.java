@@ -83,7 +83,23 @@ public class BoardTest {
     @Test
     public void dumpTest() {
         Board.reset();
+        for (int i = 0; i < 20; i += 1) {
+            Board.reset();
+            System.out.println(Board.dump());
+        }
         System.out.println(Board.dump());
+    }
+
+    @Test
+    public void moduloTest() {
+        int curr = Board.genRandom(0, 5);
+        for (int i = 0; i < 6; i += 1) {
+            curr = (curr - 1);
+            if (curr < 0) {
+                curr += 6;
+            }
+            System.out.println(curr);
+        }
     }
 
 }

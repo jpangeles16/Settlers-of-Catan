@@ -30,6 +30,7 @@ final class Hex {
      *               Of course, the probability
      *               of rolling a 2 is much lower
      *               than that of a 7.
+     *               The desert tile gets a number 0.
      *
      * @param id Each hex has a unique id. We will enumerate each hex starting
      *           from the top-left corner, and move from left to right and from
@@ -37,7 +38,8 @@ final class Hex {
      *           while the very last hex (bottom right) has index 18.
      */
     Hex(int id, int number) {
-        assert 2 <= number && number <= 12 : "Invalid number!";
+        assert (number == 0 ||
+                (2 <= number && number <= 12)) : "Invalid number!";
         _id = id;
         _number = number;
     }
