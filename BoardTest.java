@@ -102,4 +102,12 @@ public class BoardTest {
         }
     }
 
+    @Test
+    public void placeSettlementTest() {
+        Board.reset();
+        Settlement settlement = new Settlement(Color.red());
+        Board.placeSettlement(settlement, 5, 1);
+        System.out.println(Board.dump());
+    }
+
 }

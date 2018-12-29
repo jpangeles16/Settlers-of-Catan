@@ -29,6 +29,18 @@ final class Board {
      */
     private Board() { }
 
+    /** Places a settlement on HEX at position POSN.
+     *
+     * @param settlement Settlement to be placed on HEX.
+     * @param hex An integer that denotes which hex to place
+     *            SETTLEMENT on.
+     * @param posn Position to place SETTLEMENT on.
+     */
+    static void placeSettlement(Settlement settlement, int hex, int posn) {
+        BOARD[hex - 1].addBuilding(posn, settlement);
+    }
+
+
     /** Returns the hex corresponding to the axial coordinates q and r.
      *
      * @param q Number of steps horizontally from the center of the board
@@ -37,6 +49,11 @@ final class Board {
      */
     static Hex get(int q, int r) {
         return AXIAL[q + 2][r + 2];
+    }
+
+    /** Returns the hex labeled as INT. */
+    static Hex get(int hex) {
+        return BOARD[hex - 1];
     }
 
     /** Returns the board in the form of an array of hexes. */
@@ -59,6 +76,7 @@ final class Board {
             }
         }
         distributeTokens();
+        // Now I just need to set the neighbors accordingly.
     }
 
     /** Distributes the tokens in a random fashion
@@ -278,11 +296,48 @@ final class Board {
      */
     private static Hex[] BOARD = new Hex[19];
 
-    /** Sets up BOARD. */
+    /** Sets up BOARD and all of the hexes' neighbors accordingly. */
     static {
         for (int i = 0; i < 19; i += 1) {
             BOARD[i] = new Hex(i + 1, 2);
         }
+
+        for (int i = 1; i < 3; i += 1) {
+            get(i).setEast(get(i + 1));
+            get(i).setSouthEast(get(i + 4));
+            get(i).setSouthWest(get(i + 3));
+        }
+
+        get(3).setSouthEast(get(7));
+        get(3).setSouthWest(get(6));
+
+        for (int i = 4; i < 7; i += 1) {
+            get(i).setEast(get(i + 1));
+            get(i).setSouthEast(get(i + 5));
+            get(i).setSouthWest(get(i + 4));
+        }
+
+        get(7).setSouthEast(get(12));
+        get(7).setSouthWest(get(11));
+        get(8).setEast(get(9));
+        get(8).setSouthEast(get(13));
+
+        for (int i = 9; i < 12; i += 1) {
+            get(i).setEast(get(i + 1));
+            get(i).setSouthEast(get(i + 5));
+            get(i).setSouthWest(get(i + 4));
+        }
+
+        get(12).setSouthWest(get(16));
+        get(13).setSouthEast(get(17));
+
+        for (int i = 14; i < 16; i += 1) {
+            get(i).setEast(get(i + 1));
+            get(i).setSouthEast(get(i + 4));
+            get(i).setSouthWest(get(i + 3));
+        }
+
+        get(16).setSouthWest(get(19));
     }
 
     /** The tokens. There are 18 tokens listed alphabetically
