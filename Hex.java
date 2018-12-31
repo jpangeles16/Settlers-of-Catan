@@ -70,6 +70,8 @@ final class Hex {
         return _number;
     }
 
+    /**
+
     /** ===== Set of functions that return hexes adjacent to me. =====
      *
      * @return Hex if there is an adjacent hex, or null if there is no adjacent
@@ -213,6 +215,19 @@ final class Hex {
         }
     }
 
+    /** Returns buildings that I possess in an ArrayList, enumerated in
+     * a clockwise fashion.
+     */
+    ArrayList<Building> buildings() {
+        ArrayList<Building> answer = new ArrayList<>();
+        for (int i = 0; i < 6; i += 1) {
+            if (_adjBuildings[i] != null) {
+                answer.add(_adjBuildings[i]);
+            }
+        }
+        return answer;
+    }
+
     /** Returns an ArrayList of hexes adjacent to POSN, including me. */
     ArrayList<Hex> adjacentHexes(int posn) {
         ArrayList<Hex> answer = new ArrayList<>();
@@ -227,13 +242,6 @@ final class Hex {
             answer.add(_adjHexes[hex2]);
         }
         return answer;
-    }
-
-    /** Removes BUILDING from POSN. This also removes building from my other
-     * adjacent hexes.
-     */
-    void removeBuilding(int posn, Building building) {
-
     }
 
     /** Returns true if I have a road on SIDE.
@@ -346,8 +354,15 @@ final class Hex {
      * Index 5 = northwest point
      */
     static int[][] POINTS_ON_OTHER_ADJ_HEXES
-            = new int[][] { {2, 1}, {3, 5}, {4, 0},
-                            {5, 1}, {0, 3}, {1, 3} };
+            = new int[][] { {2, 4}, {3, 5}, {4, 0},
+                            {5, 1}, {0, 2}, {1, 3} };
+
+    /** Side adjacency matrix.
+     * The index refers to a certain side on the hex, and
+     * accessing that index returns an array of sides that are
+     * adjacent to the the former side.
+     */
+    static int[][] _ADJACENT_SIDES = ADJACENT_HEXES;
 
     /** My unique id. */
     private int _id;

@@ -12,6 +12,10 @@ final class City extends Settlement {
         super(color);
     }
 
+    City(Color color, Player player) {
+        super(color, player);
+    }
+
     @Override
     int victoryPoints() {
         return 2;

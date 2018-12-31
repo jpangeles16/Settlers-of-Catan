@@ -4,5 +4,6 @@
  * @author John Angeles
  */
 
-abstract class DevelopmentCard {
+abstract class DevelopmentCard extends Card {
+
 }

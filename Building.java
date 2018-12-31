@@ -13,11 +13,23 @@ abstract class Building {
         _color = color;
     }
 
+    /** Initializes a building that is not yet placed with color COLOR
+     * and belongs to player PLAYER.
+     */
+    Building(Color color, Player player) {
+        assert Color.VALID_COLORS.contains(color) : "Invalid color!";
+        _placed = false;
+        _color = color;
+        _myOwner = player;
+    }
+
+    /** Returns the player that owns me. */
+    Player player() {
+        return _myOwner;
+    }
+
     /** Settlements give 1 VP, while cities give 2. */
     abstract int victoryPoints();
-
-//    /** Collect resources from each of my adjacent settlements. */
-//    abstract void collect();
 
     /** Places me on HEX on position POSN. Also sets my adjacent hexes
      * appropriately
@@ -40,7 +52,6 @@ abstract class Building {
         return _adjHexes;
     }
 
-
     /** Marks me as placed or not. */
     void setPlacedTo(boolean placed) {
         _placed = placed;
@@ -51,6 +62,9 @@ abstract class Building {
         return _placed;
     }
 
+    /** The player that I belong to. */
+    private Player _myOwner;
+
     /** Set of hexes that I am adjacent to. */
     private ArrayList<Hex> _adjHexes;
 
@@ -59,4 +73,5 @@ abstract class Building {
 
     /** My color. */
     protected Color _color;
+
 }

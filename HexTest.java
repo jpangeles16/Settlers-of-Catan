@@ -168,4 +168,12 @@ public class HexTest {
         System.out.println(hex1.dump());
     }
 
+    @Test
+    public void buildingsTest() {
+        Hex hex1 = new Hex(1, 2);
+        hex1.addBuilding(0, new Settlement(Color.black()));
+        hex1.addBuilding(4, new City(Color.white()));
+        assertEquals("[ B , !W!]", hex1.buildings().toString());
+    }
+
 }
