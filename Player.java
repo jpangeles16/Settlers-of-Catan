@@ -12,7 +12,8 @@ import java.util.Stack;
  *
  * Unlike the other classes, the player cannot place
  * buildings and roads onto a hex unless he or she expends resource
- * cards.
+ * cards. In this sense, players cannot place onto the board under
+ * certain conditions.
  *
  * @author John Angeles
  */
@@ -29,7 +30,7 @@ public class Player {
         _name = name;
 
         for (int i = 0; i < 15; i += 1) {
-            _roads.push(new Road(_color));
+            _roads.push(new Road(_color, this));
         }
 
         for (int i = 0; i < 5; i += 1) {
@@ -71,17 +72,36 @@ public class Player {
      * on HEX in POSN is valid. This does NOT check whether
      * I have the correct amount of resources to do so; placeRoad
      * does that for me.
+     * We can place a road if there is at least one of my roads next to
+     * the place I intend to place a new road, if there isn't a settlement that
+     * belongs to another player that cuts off my adjacent road, and if there
+     * isn't already a road on hex HEX at posn POSN.
      *
      * @param hex The hex on the board where I intend to place
      *            my road.
-     * @param posn The position of the hex where I intend to place
+     * @param side The position of the hex where I intend to place
      *             my road.
      * @return True if I am able to place one of my roads on hex HEX
      * in position POSN, false otherwise.
      */
-    boolean isValidRoad(int hex, int posn) {
-        int[][] adjacentSides = Hex._ADJACENT_SIDES;
-        
+    boolean isValidRoad(int hex, int side) {
+        int adjSide1 = side - 1, adjSide2 = (side + 1) % 6;
+
+        if (adjSide1 < 0) {
+            adjSide1 += 6;
+        }
+
+        Hex currHex = Board.get(hex);
+        Building leftB = currHex.building(side),
+                rightB = currHex.building((side + 1) % 6);
+        boolean hasAdjLRoad = (currHex.hasRoad(adjSide1) &&
+                (leftB == null || leftB.player() == this) &&
+                (currHex.getRoad(adjSide1).player() == this));
+        boolean hasAdjRRoad = (currHex.hasRoad(adjSide2) &&
+                (rightB == null || rightB.player() == this) &&
+                (currHex.getRoad(adjSide2).player() == this));
+        boolean notBlocked = !currHex.hasRoad(side);
+        return (hasAdjLRoad || hasAdjRRoad) && notBlocked;
     }
 
 
@@ -91,12 +111,23 @@ public class Player {
      * whether or not I have the correct amount of resources.
      *
      * @param hex The hex on the board where I place my road.
-     * @param posn The position of the hex where I place my road.
+     * @param side The side of the hex where I place my road.
      * @return A string message saying whether or not I have
      * successfully placed my road or not.
      */
-    String placeRoad(int hex, int posn) {
-
+    String placeRoad(int hex, int side) {
+        if (!isValidRoad(hex, side)) {
+            return "Nope, can't place it there.";
+        } else if (_wood.isEmpty() || _bricks.isEmpty()) {
+            return "Gonna need more trees and bricks.";
+        } else if (_roads.isEmpty()) {
+            return "Out of roads!";
+        } else {
+            _wood.pop();
+            _bricks.pop();
+            Board.placeRoad(_roads.pop(), hex, side);
+            return _name + " put down a road!";
+        }
     }
 
     /** Places a settlement at the cost of expending
@@ -124,8 +155,6 @@ public class Player {
         }
     }
 
-
-
     /** Current victory points that I have. */
     private int _victoryPoints;
 
@@ -137,9 +166,6 @@ public class Player {
 
     /** Cities that I haven't placed yet. */
     private Stack<City> _cities = new Stack<>();
-
-//    /** ResourceCards that I own. */
-//    private HashMap<Resource, Stack<Card>> _resources = new HashMap<>();
 
     /** Wood that I own. */
     private Stack<Card> _wood = new Stack<>();

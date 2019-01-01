@@ -1,6 +1,3 @@
-import afu.org.checkerframework.checker.oigj.qual.O;
-import net.sf.saxon.expr.Component;
-
 import java.util.Collections;
 import java.util.ArrayList;
 
@@ -8,6 +5,13 @@ import java.util.ArrayList;
  * There is only one board in the game.
  * The board is setup like any other Catan game.
  * Also contains some useful random functions.
+ *
+ * You might notice that there are functions that
+ * allow you to place roads and settlements on the board.
+ * Note that you may do so with no restrictions, because the
+ * player class already restricts players from
+ * placing structures onto the board.
+ *
  * @author John Angeles
  */
 final class Board {
@@ -56,6 +60,10 @@ final class Board {
         BOARD[hex - 1].addBuilding(posn, settlement);
     }
 
+    /** Places a road on hex at side SIDE. */
+    static void placeRoad(Road road, int hex, int side) {
+        BOARD[hex - 1].placeRoad(road, side);
+    }
 
     /** Returns the hex corresponding to the axial coordinates q and r.
      *
@@ -73,7 +81,7 @@ final class Board {
     }
 
     /** Returns the board in the form of an array of hexes. */
-    private static Hex[] hexList() {
+    static Hex[] hexList() {
         return BOARD;
     }
 

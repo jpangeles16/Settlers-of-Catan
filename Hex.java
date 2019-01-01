@@ -215,6 +215,11 @@ final class Hex {
         }
     }
 
+    /** Returns the building on POSN, or null if there isn't. */
+    Building building(int posn) {
+        return _adjBuildings[posn];
+    }
+
     /** Returns buildings that I possess in an ArrayList, enumerated in
      * a clockwise fashion.
      */
@@ -356,13 +361,6 @@ final class Hex {
     static int[][] POINTS_ON_OTHER_ADJ_HEXES
             = new int[][] { {2, 4}, {3, 5}, {4, 0},
                             {5, 1}, {0, 2}, {1, 3} };
-
-    /** Side adjacency matrix.
-     * The index refers to a certain side on the hex, and
-     * accessing that index returns an array of sides that are
-     * adjacent to the the former side.
-     */
-    static int[][] _ADJACENT_SIDES = ADJACENT_HEXES;
 
     /** My unique id. */
     private int _id;

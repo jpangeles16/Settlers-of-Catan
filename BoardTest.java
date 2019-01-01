@@ -110,4 +110,29 @@ public class BoardTest {
         System.out.println(Board.dump());
     }
 
+    @Test
+    public void placeRoadTest() {
+        Board.reset();
+        Player alice = new Player(Color.red(), "Alice");
+        assertEquals("Nope, can't place it there.", alice.placeRoad(6, 5));
+        System.out.println(Board.dump());
+        alice.giveResource(new WoodCard());
+        alice.giveResource(new BrickCard());
+        Board.placeRoad(new Road(Color.red()), 6, 0);
+        System.out.println(Board.dump());
+        assertEquals("Nope, can't place it there.", alice.placeRoad(1, 1));
+        assertTrue(Board.get(6).hasRoad(0));
+        assertTrue(Board.get(3).hasRoad(3));
+        alice.placeRoad(6, 1);
+        assertTrue(Board.get(6).hasRoad(1));
+        assertTrue(Board.get(7).hasRoad(4));
+        System.out.println(Board.dump());
+    }
+
+    @Test
+    public void placeRoadTest2() {
+        Board.reset();
+        Player alice = new Player(Color.black(), "Alice");
+    }
+
 }
