@@ -6,6 +6,11 @@ import static org.junit.Assert.*;
  */
 public class PlayerTest {
 
+    /** Prints a visual representation of the board. */
+    private void dump() {
+        System.out.println(Board.dump());
+    }
+
     @Test
     public void giveResourceTest() {
         Board.reset();
@@ -86,12 +91,50 @@ public class PlayerTest {
         Board.placeRoad(new Road(Color.black()), 9, 0);
         alice.giveResource(new WoodCard());
         alice.giveResource(new SheepCard());
-        System.out.println(Board.dump());
         assertEquals("Alice can't put down a road because" +
                 "the adjacent road doesn't belong to anyone.","Nope, can't place it there.",
                 alice.placeRoad(9, 1));
         Board.placeRoad(new Road(Color.red(), alice), 9, 0);
+        assertEquals("Still missing bricks!" +
+                "there is already an adjacent road that belongs to her.", "Gonna " +
+                "need more trees and bricks.", alice.placeRoad(9, 1));
+        alice.giveResource(new BrickCard());
+        assertEquals("Now she can place a road.", "Alice put down a road!",
+                alice.placeRoad(9, 1));
         System.out.println(Board.dump());
+    }
+
+    /** This test tests whether or not we can place a road
+     * where there is another settlement available. */
+    @Test
+    public void placeRoadTest4() {
+        Board.reset();
+        Player alice = new Player(Color.red(), "Alice");
+        alice.giveResource(new WoodCard());
+        alice.giveResource(new BrickCard());
+        Board.placeSettlement(new Settlement(Color.red()),
+                14, 5);
+        Board.placeRoad(new Road(Color.orange()),
+                9, 3);
+        assertEquals("Nope, can't place it there.",
+                alice.placeRoad(13, 1));
+        dump();
+    }
+
+    /** In this test, we can place a road. */
+    @Test
+    public void placeRoadTest5() {
+        Board.reset();
+        Player alice = new Player(Color.red(), "Alice");
+        alice.giveResource(new WoodCard());
+        alice.giveResource(new BrickCard());
+        Board.placeSettlement(new Settlement(Color.red(), alice), 18, 0);
+        Board.placeSettlement(new Settlement(Color.orange()), 18, 1);
+        Board.placeRoad(new Road(Color.red(), alice), 18, 5);
+        Board.placeRoad(new Road(Color.red()), 18, 1);
+        dump();
+        assertEquals("Alice put down a road!", alice.placeRoad(18, 0));
+        dump();
     }
 
 }

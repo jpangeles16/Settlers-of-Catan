@@ -1,4 +1,5 @@
 import java.util.Stack;
+import java.util.LinkedList;
 
 /** A player.  There can be up to four players.
  * Each player has 15 roads, 5 settlements and
@@ -125,9 +126,24 @@ public class Player {
         } else {
             _wood.pop();
             _bricks.pop();
-            Board.placeRoad(_roads.pop(), hex, side);
+            Road newRoad = _roads.pop();
+            _placedRoads.push(newRoad);
+            Board.placeRoad(newRoad, hex, side);
             return _name + " put down a road!";
         }
+    }
+
+    /** Returns true if we can place a settlement on the specified
+     * HEX on the specified SIDE.
+     *
+     * @param hex Hex where we intend to place our settlement.
+     * @param side Side where we intend to place our settlement.
+     * @return True if we can place a settlement on HEX in SIDE or
+     * false otherwise.
+     */
+    boolean isValidSettlement(int hex, int side) {
+        //FIXME
+        return false;
     }
 
     /** Places a settlement at the cost of expending
@@ -166,6 +182,16 @@ public class Player {
 
     /** Cities that I haven't placed yet. */
     private Stack<City> _cities = new Stack<>();
+
+    /** Roads that I have placed. */
+    private LinkedList<Road> _placedRoads = new LinkedList<>();
+
+    /** Settlements that I have placed. */
+    private LinkedList<Settlement> _placedSettlements
+            = new LinkedList<>();
+
+    /** Cities that I have placed. */
+    private LinkedList<City> _placedCities = new LinkedList<>();
 
     /** Wood that I own. */
     private Stack<Card> _wood = new Stack<>();

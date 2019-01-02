@@ -351,6 +351,8 @@ final class Board {
         }
 
         get(16).setSouthWest(get(19));
+        get(17).setEast(get(18));
+        get(18).setEast(get(19));
     }
 
     /** The tokens. There are 18 tokens listed alphabetically

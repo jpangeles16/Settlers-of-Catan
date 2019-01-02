@@ -129,10 +129,4 @@ public class BoardTest {
         System.out.println(Board.dump());
     }
 
-    @Test
-    public void placeRoadTest2() {
-        Board.reset();
-        Player alice = new Player(Color.black(), "Alice");
-    }
-
 }
