@@ -28,6 +28,14 @@ abstract class Building {
         return _myOwner;
     }
 
+    /** Returns me to my player that owns me.
+     * This function assumes that I have already been removed
+     * from the hex that I have been on.
+     */
+    void returnToPlayer() {
+        //FIXME
+    }
+
     /** Settlements give 1 VP, while cities give 2. */
     abstract int victoryPoints();
 

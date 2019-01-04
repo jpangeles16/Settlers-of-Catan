@@ -4,14 +4,14 @@ import java.util.ArrayList;
 /** The game board that consists of 19 hexes.
  * There is only one board in the game.
  * The board is setup like any other Catan game.
- * Also contains some useful random functions.
+ *
+ * Also contains some useful static random functions.
  *
  * You might notice that there are functions that
  * allow you to place roads and settlements on the board.
  * Note that you may do so with no restrictions, because the
- * player class already restricts players from
- * placing structures onto the board.
- *
+ * player class already prevents players to illegally place
+ * structures onto the board.
  * @author John Angeles
  */
 final class Board {
@@ -85,6 +85,17 @@ final class Board {
         return BOARD;
     }
 
+    /** Removes all pieces from the board and returns them to each of their players.
+     * Specifically, this method iteratively takes each hex and calls all
+     * of their clear methods individually.
+     * If any piece does not belong to any player, it is simply deleted.
+     */
+    static void clear() {
+        for (Hex currHex: BOARD) {
+            currHex.clear();
+        }
+    }
+
     /** Generates the board with hexes numbered from 1 to 19.
      * It first randomly distributes the resources, then
      * distributes probability tokens from the center
@@ -93,6 +104,7 @@ final class Board {
      */
     static void reset() {
         Collections.shuffle(RESOURCES);
+        clear();
         for (int i = 0; i < 19; i += 1) {
             BOARD[i].setResource(RESOURCES.get(i));
             if (BOARD[i].resource() == DESERT) {
@@ -173,6 +185,7 @@ final class Board {
      */
     private static Hex clockwiseOuter(Hex hex) {
         assert MIDDLE.contains(hex) : "Invalid hex!";
+
         if (hex == BOARD[4]) {
             return BOARD[3];
         } else if (hex == BOARD[5]) {

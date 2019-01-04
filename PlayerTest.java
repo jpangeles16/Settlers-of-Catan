@@ -137,4 +137,91 @@ public class PlayerTest {
         dump();
     }
 
+    /** Generates a player named Alice that has enough resources to build one settlement.
+     * The default color is white. */
+    private Player aliceSettlement() {
+        Player alice = new Player(Color.white(), "Alice");
+        alice.giveResource(new WoodCard());
+        alice.giveResource(new BrickCard());
+        alice.giveResource(new SheepCard());
+        alice.giveResource(new WheatCard());
+        return alice;
+    }
+
+    /** Trivial test. If there is nothing on the board, then Alice can't place
+     * a settlement. */
+    @Test
+    public void isValidSettlementTest() {
+        Board.reset();
+        Player alice = aliceSettlement();
+        assertFalse(alice.isValidSettlement(9, 0));
+        assertFalse(alice.isValidSettlement(9, 1));
+    }
+
+    /** Same as the first test, but here we are checking for potential
+     * edge cases along the perimeter of the board.
+     */
+    @Test
+    public void isValidSettlementTest2() {
+        Board.reset();
+        Player alice = aliceSettlement();
+        assertFalse(alice.isValidSettlement(7, 1));
+        assertFalse(alice.isValidSettlement(4, 5));
+    }
+
+    /** Here are some cases where we can place a settlement. */
+    @Test
+    public void isValidSettlementTest3() {
+        Board.reset();
+        Player alice = aliceSettlement();
+        Board.placeRoad(new Road(Color.white()), 4, 0);
+        System.out.println(Board.dump());
+        assertTrue(alice.isValidSettlement(4, 0));
+        assertTrue(alice.isValidSettlement(4, 1));
+        assertFalse(alice.isValidSettlement(4, 5));
+    }
+
+    /** We cannot place a settlement next to another settlement. */
+    @Test
+    public void isValidSettlementTest4() {
+        Board.reset();
+        Player alice = aliceSettlement();
+        Board.placeSettlement(new Settlement(Color.white()), 17, 3);
+        assertFalse(alice.isValidSettlement(17, 2));
+        assertFalse(alice.isValidSettlement(17, 4));
+        assertFalse(alice.isValidSettlement(17, 1));
+        Board.placeRoad(new Road(Color.white()), 17, 1);
+        assertTrue(alice.isValidSettlement(17, 1));
+        alice.placeSettlement(17, 1);
+        System.out.println(Board.dump());
+    }
+
+    /** Similar test as above. */
+    @Test
+    public void isValidSettlementTest5() {
+        Board.reset();
+        Player alice = aliceSettlement();
+        Board.placeSettlement(new Settlement(Color.white()), 14, 1);
+        Board.placeSettlement(new Settlement(Color.white()), 14, 5);
+        Board.placeSettlement(new Settlement(Color.white()), 9, 1);
+        Board.placeRoad(new Road(Color.white()), 9, 0);
+        System.out.println(Board.dump());
+        assertFalse(alice.isValidSettlement(9, 1));
+        assertFalse(alice.isValidSettlement(9, 2));
+    }
+
+    @Test
+    public void isValidSettlementTest6() {
+        Board.reset();
+        Player alice = aliceSettlement();
+        Board.placeSettlement(new Settlement(Color.white()), 14, 1);
+        Board.placeSettlement(new Settlement(Color.white()), 14, 5);
+        assertFalse(alice.isValidSettlement(9, 1));
+        Board.placeRoad(new Road(Color.red()), 9, 1);
+        System.out.println(Board.dump());
+        assertFalse(alice.isValidSettlement(9, 1));
+
+    }
+
+
 }

@@ -144,6 +144,10 @@ public class Player {
     boolean isValidSettlement(int hex, int posn) {
         Hex currHex = Board.get(hex);
 
+        if (currHex.hasBuilding(posn)) {
+            return false;
+        }
+
         int left = moduloSix(posn - 1);
         int right = moduloSix(posn + 1);
 
@@ -152,13 +156,13 @@ public class Player {
             if (currHex.hasAdjacentHex(left)) {
                 Hex adjL = currHex.adjHex(left);
 
-                if (!adjL.hasRoad(left)) {
+                if (!adjL.hasRoad(right)) {
                     return false;
-                } else if (adjL.getRoad(left).color() != _color) {
+                } else if (adjL.getRoad(right).color() != _color) {
                     return false;
                 }
 
-            } else if (currHex.hasAdjacentHex(right)) {
+            } else if (currHex.hasAdjacentHex(posn)) {
                 Hex adjR = currHex.adjHex(right);
                 int roadPosn = moduloSix(posn - 2);
 
@@ -172,6 +176,12 @@ public class Player {
                 return false;
             }
 
+        } else if (currHex.hasRoad(left)
+                && currHex.getRoad(left).color() != _color) {
+            return false;
+        } else if (currHex.hasRoad(posn)
+                && currHex.getRoad(posn).color() != _color) {
+            return false;
         }
 
         if (currHex.hasBuilding(left) || currHex.hasBuilding(right)) {

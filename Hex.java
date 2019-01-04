@@ -285,6 +285,16 @@ final class Hex {
         }
     }
 
+    /** Removes all pieces from me.
+     * Every piece that I remove removes themselves from
+     * the hexes they are adjacent to.
+     * This method does not remove pieces from any hex that is adjacent to me.
+     * This method also assumes that clear in Board has been called.
+     */
+    void clear() {
+        //FIXME
+    }
+
     /** Useful if you would like to see the hex printed out
      * for testing or sanity purposes.
      *

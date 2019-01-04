@@ -17,6 +17,14 @@ class Road {
         _player = player;
     }
 
+    /** Returns me to my player that owns me.
+     * This function assumes that I have already been removed
+     * from the hex that I have been on.
+     */
+    void returnToPlayer() {
+        //FIXME
+    }
+
     /** Returns my color. */
     Color color() {
         return _color;
