@@ -134,16 +134,65 @@ public class Player {
     }
 
     /** Returns true if we can place a settlement on the specified
-     * HEX on the specified SIDE.
+     * HEX on the specified POSN.
      *
      * @param hex Hex where we intend to place our settlement.
-     * @param side Side where we intend to place our settlement.
+     * @param posn Side where we intend to place our settlement.
      * @return True if we can place a settlement on HEX in SIDE or
      * false otherwise.
      */
-    boolean isValidSettlement(int hex, int side) {
-        //FIXME
-        return false;
+    boolean isValidSettlement(int hex, int posn) {
+        Hex currHex = Board.get(hex);
+
+        int left = moduloSix(posn - 1);
+        int right = moduloSix(posn + 1);
+
+        if (!currHex.hasRoad(left) && !currHex.hasRoad(posn)) {
+
+            if (currHex.hasAdjacentHex(left)) {
+                Hex adjL = currHex.adjHex(left);
+
+                if (!adjL.hasRoad(left)) {
+                    return false;
+                } else if (adjL.getRoad(left).color() != _color) {
+                    return false;
+                }
+
+            } else if (currHex.hasAdjacentHex(right)) {
+                Hex adjR = currHex.adjHex(right);
+                int roadPosn = moduloSix(posn - 2);
+
+                if (!adjR.hasRoad(roadPosn)) {
+                    return false;
+                } else if (adjR.getRoad(roadPosn).color() != _color) {
+                    return false;
+                }
+
+            } else {
+                return false;
+            }
+
+        }
+
+        if (currHex.hasBuilding(left) || currHex.hasBuilding(right)) {
+            return false;
+        } else if (currHex.hasAdjacentHex(left)) {
+            Hex adjL = currHex.adjHex(left);
+
+            if (adjL.hasBuilding(right)) {
+                return false;
+            }
+
+        } else if (currHex.hasAdjacentHex(posn)) {
+            Hex adjR = currHex.adjHex(posn);
+
+            if (adjR.hasBuilding(left)) {
+                return false;
+            }
+
+        }
+
+        return true;
     }
 
     /** Places a settlement at the cost of expending
@@ -168,6 +217,20 @@ public class Player {
             return _name + " built a settlement!";
         } else {
             return "Shucks, not enough resources!";
+        }
+    }
+
+    /** Private function to calculate x mod 6. */
+    private int moduloSix(int x) {
+        if (x > 0) {
+            return x % 6;
+        } else {
+
+            while (x < 0) {
+                x += 6;
+            }
+
+            return x;
         }
     }
 

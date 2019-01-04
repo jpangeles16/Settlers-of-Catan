@@ -17,6 +17,11 @@ class Road {
         _player = player;
     }
 
+    /** Returns my color. */
+    Color color() {
+        return _color;
+    }
+
     /** Returns the player that owns me, or null if I am not
      * owned by anyone.
      */
