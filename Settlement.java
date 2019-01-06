@@ -27,6 +27,13 @@ class Settlement extends Building {
     }
 
     @Override
+    void returnToPlayer() {
+        if (player() != null) {
+            player().takeBackSettlement(this);
+        }
+    }
+
+    @Override
     int victoryPoints() {
         return 1;
     }

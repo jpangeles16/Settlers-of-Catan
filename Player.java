@@ -96,11 +96,11 @@ public class Player {
         Building leftB = currHex.building(side),
                 rightB = currHex.building((side + 1) % 6);
         boolean hasAdjLRoad = (currHex.hasRoad(adjSide1) &&
-                (leftB == null || leftB.player() == this) &&
-                (currHex.getRoad(adjSide1).player() == this));
+                (leftB == null || leftB.color() == _color) &&
+                (currHex.getRoad(adjSide1).color() == _color));
         boolean hasAdjRRoad = (currHex.hasRoad(adjSide2) &&
-                (rightB == null || rightB.player() == this) &&
-                (currHex.getRoad(adjSide2).player() == this));
+                (rightB == null || rightB.color() == _color) &&
+                (currHex.getRoad(adjSide2).color() == _color));
         boolean notBlocked = !currHex.hasRoad(side);
         return (hasAdjLRoad || hasAdjRRoad) && notBlocked;
     }
@@ -205,6 +205,36 @@ public class Player {
         return true;
     }
 
+    /** Adds SETTLEMENT back to _settlements. Assumes
+     * that we have called returnToPlayer in the
+     * Settlement class.
+     */
+    void takeBackSettlement(Settlement settlement) {
+        for (int i = 0; i < _placedSettlements.size(); i ++) {
+            Settlement curr = _placedSettlements.get(i);
+            if (curr == settlement) {
+                _settlements.add(curr);
+                _placedSettlements.remove(i);
+                return;
+            }
+        }
+    }
+
+    /** Adds CITY back to _cities. Assumes that
+     * CITY is in _placedCities, because otherwise this
+     * function will error.
+     */
+    void takeBackCity(City city) {
+        for (int i = 0; i < _placedCities.size(); i ++) {
+            City curr = _placedCities.get(i);
+            if (curr == city) {
+                _cities.add(curr);
+                _placedCities.remove(i);
+                return;
+            }
+        }
+    }
+
     /** Places a settlement at the cost of expending
      * one wood, one brick, one wheat, and one sheep.
      * Before doing so, this method checks whether I have
@@ -223,6 +253,7 @@ public class Player {
             _wheat.pop();
             _sheep.pop();
             Settlement toPlace = _settlements.pop();
+            _placedSettlements.add(toPlace);
             Board.placeSettlement(toPlace, hex, posn);
             return _name + " built a settlement!";
         } else {

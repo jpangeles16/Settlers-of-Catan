@@ -8,4 +8,5 @@ abstract class Card {
      * anyone.
      */
     private Player _owner;
+
 }

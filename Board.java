@@ -57,7 +57,7 @@ final class Board {
      * @param posn Position to place SETTLEMENT on.
      */
     static void placeSettlement(Settlement settlement, int hex, int posn) {
-        BOARD[hex - 1].addBuilding(posn, settlement);
+        settlement.placeOn(BOARD[hex - 1], posn);
     }
 
     /** Places a road on hex at side SIDE. */

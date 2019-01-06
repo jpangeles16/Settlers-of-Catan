@@ -12,23 +12,29 @@ public class PlayerTest {
     }
 
     @Test
+    public void clearTest() {
+        Board.reset();
+        Board.placeSettlement(new Settlement(Color.red()), 1, 1);
+        Board.placeSettlement(new Settlement(Color.white()), 2, 0);
+        Board.reset();
+        dump();
+    }
+
+    @Test
     public void giveResourceTest() {
         Board.reset();
         System.out.println(Board.dump());
         Player alice = new Player(Color.white(), "Alice");
-        Player bob = new Player(Color.black(), "Bob");
         System.out.println(alice.placeSettlement(5, 0));
         alice.giveResource(new SheepCard());
         alice.giveResource(new WoodCard());
         alice.giveResource(new BrickCard());
         alice.giveResource(new WheatCard());
         System.out.println(alice.placeSettlement(5, 0));
-        System.out.println(Board.dump());
         assertTrue(Board.get(1).hasBuilding(2));
         assertTrue(Board.get(2).hasBuilding(4));
         assertTrue(Board.get(5).hasBuilding(0));
-        Building curr = Board.get(5).buildings().get(0);
-        System.out.println(curr.adjHexes());
+        dump();
     }
 
     @Test
@@ -41,6 +47,7 @@ public class PlayerTest {
 
     @Test
     public void placeRoadTest() {
+        dump();
         Board.reset();
         Player alice = new Player(Color.red(), "Alice");
         assertEquals("Nope, can't place it there.", alice.placeRoad(6, 5));
@@ -128,7 +135,7 @@ public class PlayerTest {
         Player alice = new Player(Color.red(), "Alice");
         alice.giveResource(new WoodCard());
         alice.giveResource(new BrickCard());
-        Board.placeSettlement(new Settlement(Color.red(), alice), 18, 0);
+        Board.placeSettlement(new Settlement(Color.red()), 18, 0);
         Board.placeSettlement(new Settlement(Color.orange()), 18, 1);
         Board.placeRoad(new Road(Color.red(), alice), 18, 5);
         Board.placeRoad(new Road(Color.red()), 18, 1);

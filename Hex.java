@@ -292,7 +292,13 @@ final class Hex {
      * This method also assumes that clear in Board has been called.
      */
     void clear() {
-        //FIXME
+        for (int i = 0; i < 6; i += 1) {
+            if (_adjBuildings[i] != null) {
+                Building curr = _adjBuildings[i];
+                curr.returnToPlayer();
+                _adjBuildings[i] = null;
+            }
+        }
     }
 
     /** Useful if you would like to see the hex printed out

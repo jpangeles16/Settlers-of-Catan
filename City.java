@@ -22,6 +22,14 @@ final class City extends Settlement {
     }
 
     @Override
+    void returnToPlayer() {
+        if (player() != null) {
+            player().takeBackCity(this);
+        }
+    }
+
+
+    @Override
     public String toString() {
         return "!" + _color.toString() + "!";
     }
