@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ddcac568-4023-48ea-9725-1715a4d8c85e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/BoardGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/PlayerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardGame/ResourceCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="323">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#264#265#0" expanded="true" />
@@ -40,75 +42,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
+        <entry file="file://$PROJECT_DIR$/BoardGame/PlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="160" column="13" lean-forward="true" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
+            <state relative-caret-position="590">
+              <caret line="240" selection-start-line="240" selection-end-line="240" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1689#1690#0" expanded="true" />
-                <element signature="e#1736#1737#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
+        <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="108" column="19" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="19" />
+            <state relative-caret-position="318">
+              <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
-                <element signature="e#1333#1334#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
-                <element signature="e#1347#1348#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoardGame/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3375">
-              <caret line="225" column="29" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
-                <element signature="e#671#672#0" expanded="true" />
-                <element signature="e#849#850#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#1919#1920#0" expanded="true" />
-                <element signature="e#1975#1976#0" expanded="true" />
-                <element signature="e#2080#2081#0" expanded="true" />
-                <element signature="e#2132#2133#0" expanded="true" />
-                <element signature="e#2467#2468#0" expanded="true" />
-                <element signature="e#2509#2510#0" expanded="true" />
-                <element signature="e#2583#2584#0" expanded="true" />
-                <element signature="e#2620#2621#0" expanded="true" />
-                <element signature="e#2713#2714#0" expanded="true" />
-                <element signature="e#2741#2742#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoardGame/Resource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-              <folding>
-                <element signature="e#375#376#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#476#477#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#542#543#0" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,6 +94,9 @@
       <find>isvalidroad</find>
       <find>dump</find>
       <find>has</find>
+      <find>placesettlement</find>
+      <find>building</find>
+      <find>alicesettlement</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,7 +133,6 @@
         <option value="$PROJECT_DIR$/BoardGame/Settlement.java" />
         <option value="$PROJECT_DIR$/BoardGame/City.java" />
         <option value="$PROJECT_DIR$/BoardGame/Building.java" />
-        <option value="$PROJECT_DIR$/BoardGame/PlayerTest.java" />
         <option value="$PROJECT_DIR$/BoardGame/Board.java" />
         <option value="$PROJECT_DIR$/BoardGame/Hex.java" />
         <option value="$PROJECT_DIR$/BoardGame/Road.java" />
@@ -188,6 +141,7 @@
         <option value="$PROJECT_DIR$/BoardGame/UnitTest.java" />
         <option value="$PROJECT_DIR$/BoardGame/BoardTest.java" />
         <option value="$PROJECT_DIR$/BoardGame/Player.java" />
+        <option value="$PROJECT_DIR$/BoardGame/PlayerTest.java" />
         <option value="$PROJECT_DIR$/BoardGame/Main.java" />
       </list>
     </option>
@@ -253,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.PlayerTest.hasSettlementOrCityTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="settlers" />
@@ -270,21 +224,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardTest.playTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="settlers" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BoardTest" />
-      <option name="METHOD_NAME" value="playTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="settlers" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlayerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.hasSettlementOrCityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="settlers" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="METHOD_NAME" value="hasSettlementOrCityTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -300,19 +254,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.BoardTest.playTest" />
       <item itemvalue="JUnit.PlayerTest" />
       <item itemvalue="JUnit.PlayerTest.isValidSettlementTest6" />
       <item itemvalue="JUnit.BoardTest" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PlayerTest.hasSettlementOrCityTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayerTest.hasSettlementOrCityTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BoardTest" />
         <item itemvalue="JUnit.PlayerTest.isValidSettlementTest6" />
         <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.BoardTest.playTest" />
       </list>
     </recent_temporary>
   </component>
@@ -330,27 +284,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardTest_playTest - 2019.02.05 at 23h 01m 52s.xml">
-      <configuration name="BoardTest.playTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_playTest - 2019.02.05 at 23h 02m 10s.xml">
-      <configuration name="BoardTest.playTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_playTest - 2019.02.05 at 23h 03m 27s.xml">
-      <configuration name="BoardTest.playTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_playTest - 2019.02.05 at 23h 03m 43s.xml">
-      <configuration name="BoardTest.playTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_playTest - 2019.02.09 at 21h 32m 06s.xml">
-      <configuration name="BoardTest.playTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_playTest - 2019.02.09 at 21h 32m 49s.xml">
-      <configuration name="BoardTest.playTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest - 2019.08.24 at 15h 15m 27s.xml">
-      <configuration name="PlayerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PlayerTest_isValidSettlementTest6 - 2019.08.24 at 15h 15m 36s.xml">
       <configuration name="PlayerTest.isValidSettlementTest6" configurationId="JUnit" />
     </history-entry>
@@ -359,6 +292,27 @@
     </history-entry>
     <history-entry file="BoardTest - 2019.08.24 at 15h 38m 52s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerTest_hasSettlementOrCityTest - 2019.08.25 at 21h 19m 21s.xml">
+      <configuration name="PlayerTest.hasSettlementOrCityTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerTest_hasSettlementOrCityTest - 2019.08.25 at 21h 21m 05s.xml">
+      <configuration name="PlayerTest.hasSettlementOrCityTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerTest_hasSettlementOrCityTest - 2019.08.25 at 21h 21m 25s.xml">
+      <configuration name="PlayerTest.hasSettlementOrCityTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerTest_hasSettlementOrCityTest - 2019.08.25 at 21h 21m 43s.xml">
+      <configuration name="PlayerTest.hasSettlementOrCityTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerTest_hasSettlementOrCityTest - 2019.08.25 at 21h 22m 18s.xml">
+      <configuration name="PlayerTest.hasSettlementOrCityTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerTest_hasSettlementOrCityTest - 2019.08.25 at 21h 22m 38s.xml">
+      <configuration name="PlayerTest.hasSettlementOrCityTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerTest_hasSettlementOrCityTest - 2019.08.25 at 21h 22m 41s.xml">
+      <configuration name="PlayerTest.hasSettlementOrCityTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -374,8 +328,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.80361444" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.22409639" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.036144577" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4361446" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -434,12 +388,6 @@
           <line>19</line>
           <properties />
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BoardGame/PlayerTest.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -523,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/cs61b-software/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/OreCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -589,19 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Building.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-          <folding>
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Road.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -640,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/PlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="227" column="16" selection-start-line="227" selection-end-line="228" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2595">
@@ -672,59 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/ResourceCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2994">
-          <caret line="297" column="30" selection-start-line="297" selection-start-column="30" selection-end-line="297" selection-end-column="30" />
-          <folding>
-            <element signature="e#1827#1828#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-            <element signature="e#2275#2276#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2355#2356#0" expanded="true" />
-            <element signature="e#2956#2957#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-            <element signature="e#4879#4880#0" expanded="true" />
-            <element signature="e#4925#4926#0" expanded="true" />
-            <element signature="e#6199#6200#0" expanded="true" />
-            <element signature="e#6241#6242#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,28 +617,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
+    <entry file="file://$PROJECT_DIR$/BoardGame/Building.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="160" column="13" lean-forward="true" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
+        <state relative-caret-position="825">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="19" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="19" />
+        <state relative-caret-position="341">
+          <caret line="303" column="42" selection-start-line="303" selection-start-column="42" selection-end-line="303" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1309#1310#0" expanded="true" />
             <element signature="e#1333#1334#0" expanded="true" />
             <element signature="e#1311#1312#0" expanded="true" />
             <element signature="e#1347#1348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/cs61b-software/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="231" column="9" lean-forward="true" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
+          <folding>
+            <element signature="e#1827#1828#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1936#1937#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2355#2356#0" expanded="true" />
+            <element signature="e#2956#2957#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#4879#4880#0" expanded="true" />
+            <element signature="e#4925#4926#0" expanded="true" />
+            <element signature="e#6199#6200#0" expanded="true" />
+            <element signature="e#6241#6242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding>
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/ResourceCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

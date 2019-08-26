@@ -150,6 +150,7 @@ public class Main {
         } else {
             player = _player4;
         }
+        // This outer loop ensures we pick a valid hex that we have a settlement placed.
         while (true) {
             System.out.println("Player " + playerID + ", place down your road!");
             System.out.println("First, please pick a hex where you already have a settlement placed.");
@@ -157,7 +158,14 @@ public class Main {
             int intInput = Integer.parseInt(input);
             if (!(1 <= intInput && intInput <= 19)) {
                 System.out.println("Please pick a number between 1 and 19!");
-                continue;
+            } else if (!player.hasSettlementOrCityOnHex(intInput)) {
+                System.out.println("Please pick a hex that has your settlement placed!");
+            } else {
+                //TODO fix this
+                while (true) {
+                    System.out.println("Okay, on hex " + intInput + ", place the road properly!");
+                }
+
             }
         }
 

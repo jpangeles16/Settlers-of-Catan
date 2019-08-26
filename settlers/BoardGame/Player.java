@@ -1,5 +1,6 @@
 import java.util.Stack;
 import java.util.LinkedList;
+import java.util.ArrayList;
 
 /** A player.  There can be up to four players.
  * Each player has 15 roads, 5 settlements and
@@ -41,6 +42,24 @@ public class Player {
         for (int i = 0; i < 4; i += 1) {
             _cities.push(new City(_color, this));
         }
+    }
+
+    /** Returns true if I have a city/settlement on hex.
+     *
+     * @param hex From 1-19
+     * @return True iff I have a settlement/city on hex.
+     */
+    boolean hasSettlementOrCityOnHex(int hex) {
+        Hex currHex = Board.get(hex);
+        ArrayList<Building> buildings = currHex.buildings();
+        for (Building curr: buildings) {
+            if (curr == null) {
+                continue;
+            } else if (curr.player() == this) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /** Returns my name.
@@ -280,6 +299,7 @@ public class Player {
             _sheep.pop();
             Settlement toPlace = _settlements.pop();
             _placedSettlements.add(toPlace);
+            toPlace.setPlacedTo(true);
             Board.placeSettlement(toPlace, hex, posn);
             return _name + " built a settlement!";
         } else {

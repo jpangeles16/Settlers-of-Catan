@@ -230,8 +230,14 @@ public class PlayerTest {
     }
 
     @Test
-    public void isValidRoadTest() {
-
+    public void hasSettlementOrCityTest() {
+        Board.reset();
+        Player alice = aliceSettlement();
+        alice.placeSettlement(1, 2);
+        System.out.println(Board.dump());
+        assertTrue(alice.hasSettlementOrCityOnHex(1));
+        assertTrue(alice.hasSettlementOrCityOnHex(2));
+        assertTrue(alice.hasSettlementOrCityOnHex(5));
     }
 
 }
