@@ -5,10 +5,11 @@ import java.util.ArrayList;
  *
  * Each hex is designated a random number generated from 2 to 12.
  *
- * Each hex can have a random resource. Any resource can be sheep, ore,
- * logs, bricks, and wheat.
+ * Each hex is designated a random resource. A resource is either wood, brick,
+ * wheat, ore, or sheep.
  *
- * Each hex must have adjacent hexes. This means that hexes act like linked lists.
+ * Each hex must have adjacent hexes. This means that hexes act
+ * like linked lists.
  *
  * There are 19 hexes total in a regular Settlers game.
  *
@@ -19,12 +20,17 @@ import java.util.ArrayList;
  * Lastly, each hex can potentially contain the robber.
  * @author John Angeles
  */
-class Hex {
+final class Hex {
 
     /** Generates me with a certain number.
-     * @param number Number that I have. Recall that a number
-     *               can go from 2 to 12.  Of course, the probability
-     *               of rolling a 2 is much lower than that of a 7.
+     * @param number Number that I have. When the
+     *               sum of the dice rolls is my number,
+     *               the settlements adjacent to me get my resource
+     *               if the robber is not on me.
+     *               Of course, the probability
+     *               of rolling a 2 is much lower
+     *               than that of a 7.
+     *               The desert tile gets a number 0.
      *
      * @param id Each hex has a unique id. We will enumerate each hex starting
      *           from the top-left corner, and move from left to right and from
@@ -32,7 +38,8 @@ class Hex {
      *           while the very last hex (bottom right) has index 18.
      */
     Hex(int id, int number) {
-        assert 2 <= number && number <= 12: "Invalid number!";
+        assert (number == 0 ||
+                (2 <= number && number <= 12)) : "Invalid number!";
         _id = id;
         _number = number;
     }
@@ -41,6 +48,29 @@ class Hex {
     int id() {
         return _id;
     }
+
+    /** Sets me to produce RESOURCE. */
+    void setResource(Resource resource) {
+        _resource = resource;
+    }
+
+    /** Returns my current resource, but errors if I don't have one set. */
+    Resource resource() {
+        assert _resource != null : "I have no resource set!";
+        return _resource;
+    }
+
+    /** Sets my number to be NUMBER. */
+    void setNumber(int number) {
+        _number = number;
+    }
+
+    /** Returns my number. */
+    int number() {
+        return _number;
+    }
+
+    /**
 
     /** ===== Set of functions that return hexes adjacent to me. =====
      *
@@ -185,6 +215,24 @@ class Hex {
         }
     }
 
+    /** Returns the building on POSN, or null if there isn't. */
+    Building building(int posn) {
+        return _adjBuildings[posn];
+    }
+
+    /** Returns buildings that I possess in an ArrayList, enumerated in
+     * a clockwise fashion.
+     */
+    ArrayList<Building> buildings() {
+        ArrayList<Building> answer = new ArrayList<>();
+        for (int i = 0; i < 6; i += 1) {
+            if (_adjBuildings[i] != null) {
+                answer.add(_adjBuildings[i]);
+            }
+        }
+        return answer;
+    }
+
     /** Returns an ArrayList of hexes adjacent to POSN, including me. */
     ArrayList<Hex> adjacentHexes(int posn) {
         ArrayList<Hex> answer = new ArrayList<>();
@@ -199,13 +247,6 @@ class Hex {
             answer.add(_adjHexes[hex2]);
         }
         return answer;
-    }
-
-    /** Removes BUILDING from POSN. This also removes building from my other
-     * adjacent hexes.
-     */
-    void removeBuilding(int posn, Building building) {
-
     }
 
     /** Returns true if I have a road on SIDE.
@@ -244,6 +285,30 @@ class Hex {
         }
     }
 
+    /** Removes all pieces from me.
+     * Every piece that I remove removes themselves from
+     * the hexes they are adjacent to.
+     * This method does not remove pieces from any hex that is adjacent to me.
+     * This method also assumes that clear in Board has been called.
+     */
+    void clear() {
+        for (int i = 0; i < 6; i += 1) {
+            if (_adjBuildings[i] != null) {
+                Building curr = _adjBuildings[i];
+                curr.returnToPlayer();
+                _adjBuildings[i] = null;
+            }
+        }
+
+        for (int i = 0; i < 6; i += 1) {
+            if (_roads[i] != null) {
+                Road curr = _roads[i];
+                curr.returnToPlayer();
+                _roads[i] = null;
+            }
+        }
+    }
+
     /** Useful if you would like to see the hex printed out
      * for testing or sanity purposes.
      *
@@ -272,10 +337,15 @@ class Hex {
             number = "00" + String.valueOf(_number);
         }
 
+        String resource = " N/A ";
+        if (_resource != null) {
+            resource = _resource.toString();
+        }
+
         return    "      *" + buildings[0] + "*      \n"
                 + "     " + roads[5] + "     " + roads[0] + "     \n"
                 + "*" + buildings[5] + "* |" + number + "| *" + buildings[1] + "*\n"
-                + "  " + roads[4] + "          " + roads[1] + "  \n"
+                + "  " + roads[4] + "   " + resource + "   " + roads[1] + "  \n"
                 + "*" + buildings[4] + "* Hex" + id + " *" + buildings[2] + "*\n"
                 + "     " + roads[3] + "     " + roads[2] + "     \n"
                 + "      *" + buildings[3] + "*      ";
@@ -313,14 +383,17 @@ class Hex {
      * Index 5 = northwest point
      */
     static int[][] POINTS_ON_OTHER_ADJ_HEXES
-            = new int[][] { {2, 1}, {3, 5}, {4, 0},
-                            {5, 1}, {0, 3}, {1, 3} };
+            = new int[][] { {2, 4}, {3, 5}, {4, 0},
+                            {5, 1}, {0, 2}, {1, 3} };
 
     /** My unique id. */
     private int _id;
 
     /** Returns my numeric value. */
     private int _number;
+
+    /** My resource that I produce. */
+    private Resource _resource;
 
     /** Returns true if I have the robber on me. */
     private boolean _hasRobber;

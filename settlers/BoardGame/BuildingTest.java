@@ -15,7 +15,7 @@ public class BuildingTest {
         hex1.setNorthEast(hex2);
         hex1.setEast(hex3);
         hex2.setSouthEast(hex3);
-        Settlement settlement = new Settlement(Color.Red());
+        Settlement settlement = new Settlement(Color.red());
         settlement.placeOn(hex1, 1);
         assertEquals("[Hex 1, Hex 2, Hex 3]",
                 settlement.adjHexes().toString());

@@ -12,14 +12,25 @@ final class City extends Settlement {
         super(color);
     }
 
+    City(Color color, Player player) {
+        super(color, player);
+    }
+
     @Override
     int victoryPoints() {
         return 2;
     }
 
     @Override
+    void returnToPlayer() {
+        if (player() != null) {
+            player().takeBackCity(this);
+        }
+    }
+
+
+    @Override
     public String toString() {
-        //FIXME
         return "!" + _color.toString() + "!";
     }
 

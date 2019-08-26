@@ -1,3 +1,4 @@
+
 /** A settlement.
  * Each settlement belongs to a certain player.
  * Each settlement can also be adjacent to multiple hexes.
@@ -7,15 +8,30 @@
  */
 class Settlement extends Building {
 
+    /** Constructs a generic settlement with a
+     * color COLOR.
+     * @param color My color.
+     */
     Settlement(Color color) {
         super(color);
     }
 
-//    Settlement(char color, int hex, int posn) {
-//        super(color, hex, posn);
-//    }
-//
-//    Settlement(char color )
+    /** Constructs a settlement with color COLOR that
+     * belongs to player PLAYER.
+     *
+     * @param color My color.
+     * @param player My player that owns me.
+     */
+    Settlement(Color color, Player player) {
+        super(color, player);
+    }
+
+    @Override
+    void returnToPlayer() {
+        if (player() != null) {
+            player().takeBackSettlement(this);
+        }
+    }
 
     @Override
     int victoryPoints() {

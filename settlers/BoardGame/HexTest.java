@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 /** Set of tests for the hex class.
  * Also tests a little bit of the Building class and its
  * subclasses.
- *
  * @author John Angeles
  */
 public class HexTest {
@@ -56,7 +55,7 @@ public class HexTest {
     @Test
     public void addBuildingTest() {
         Hex hex1 = new Hex(1, 2);
-        Building building = new Settlement(Color.Black());
+        Building building = new Settlement(Color.black());
         hex1.addBuilding(0, building);
         System.out.println(hex1.dump());
         assertTrue(hex1.hasBuilding(0));
@@ -67,7 +66,7 @@ public class HexTest {
         Hex hex1 = new Hex(1, 2);
         Hex hex2 = new Hex(2, 3);
         hex1.setSouthWest(hex2);
-        hex1.addBuilding(4, new Settlement(Color.Black()));
+        hex1.addBuilding(4, new Settlement(Color.black()));
         assertTrue(hex1.hasBuilding(4));
         assertTrue(hex2.hasBuilding(0));
     }
@@ -80,7 +79,7 @@ public class HexTest {
         hex1.setNorthWest(hex3);
         hex1.setWest(hex2);
         hex2.setNorthEast(hex3);
-        hex1.addBuilding(5, new Settlement(Color.Black()));
+        hex1.addBuilding(5, new Settlement(Color.black()));
         System.out.println(hex2.dump());
         System.out.println(hex3.dump());
         assertTrue(hex1.hasBuilding(5));
@@ -92,8 +91,8 @@ public class HexTest {
     public void placeRoadTest() {
         Hex hex1 = new Hex(1, 10);
         assertFalse(hex1.hasRoad(1));
-        hex1.placeRoad(new Road(Color.Red()), 1);
-        hex1.placeRoad(new Road(Color.Red()), 0);
+        hex1.placeRoad(new Road(Color.red()), 1);
+        hex1.placeRoad(new Road(Color.red()), 0);
         assertTrue(hex1.hasRoad(1));
         assertTrue(hex1.hasRoad(0));
         System.out.println(hex1.dump());
@@ -104,7 +103,7 @@ public class HexTest {
         Hex hex1 = new Hex(1, 10);
         Hex hex2 = new Hex(2, 11);
         hex1.setEast(hex2);
-        hex1.placeRoad(new Road(Color.Red()), 1);
+        hex1.placeRoad(new Road(Color.red()), 1);
         assertTrue(hex1.hasRoad(1));
         assertTrue(hex2.hasRoad(4));
         System.out.println(hex1.dump() + "\n" + hex2.dump());
@@ -118,8 +117,8 @@ public class HexTest {
         hex1.setEast(hex2);
         hex1.setNorthEast(hex3);
         hex3.setSouthEast(hex2);
-        Road road1 = new Road(Color.Red());
-        Road road2 = new Road(Color.Red());
+        Road road1 = new Road(Color.red());
+        Road road2 = new Road(Color.red());
         hex1.placeRoad(road1, 0);
         hex2.placeRoad(road2, 5);
         assertTrue(hex1.hasRoad(0));
@@ -127,6 +126,7 @@ public class HexTest {
         assertTrue(hex3.hasRoad(2));
         assertTrue(hex2.hasRoad(5));
         assertFalse(hex2.hasRoad(4));
+        hex3.placeRoad(new Road(Color.black()), 1);
         System.out.println(hex1.dump());
         System.out.println(hex2.dump());
         System.out.println(hex3.dump());
@@ -145,11 +145,72 @@ public class HexTest {
     }
 
     @Test
+    public void resourceTest() {
+        Hex hex1 = new Hex(1, 10);
+        hex1.setResource(Resource.brick());
+        Hex hex2 = new Hex(2, 11);
+        hex2.setResource(Resource.brick());
+        Hex hex3 = new Hex(3, 12);
+        hex3.setResource(Resource.brick());
+        assertEquals(Resource.brick(), hex1.resource());
+        assertEquals("Invalid resources!", hex1.resource(), hex2.resource());
+        assertEquals("Invalid resources!", hex1.resource(), hex3.resource());
+    }
+
+    @Test
     public void dumpTest() {
         Hex hex1 = new Hex(1, 2);
-        hex1.addBuilding(0, new Settlement(Color.Black()));
-        hex1.addBuilding(2, new City(Color.White()));
+        hex1.addBuilding(0, new Settlement(Color.black()));
+        hex1.addBuilding(2, new City(Color.white()));
         System.out.println(hex1.dump());
+        hex1.setNumber(5);
+        assertEquals(5, hex1.number());
+        System.out.println(hex1.dump());
+    }
+
+    @Test
+    public void buildingsTest() {
+        Hex hex1 = new Hex(1, 2);
+        hex1.addBuilding(0, new Settlement(Color.black()));
+        hex1.addBuilding(4, new City(Color.white()));
+        assertEquals("[ B , !W!]", hex1.buildings().toString());
+    }
+
+    @Test
+    public void clearTest() {
+        Hex hex1 = new Hex(1, 2);
+        hex1.placeRoad(new Road(Color.red()), 0);
+        hex1.placeRoad(new Road(Color.red()), 1);
+        assertTrue(hex1.hasRoad(0));
+        assertTrue(hex1.hasRoad(1));
+        hex1.clear();
+        assertFalse(hex1.hasRoad(0));
+        assertFalse(hex1.hasRoad(1));
+    }
+
+    /** Returns a new player named alice whose color is red
+     * that can build up to x roads.
+     */
+    private Player aliceRoad(int x) {
+        Player alice = new Player(Color.red(), "Alice");
+        for (int i = 0; i < x; i += 1) {
+            alice.giveResource(new WoodCard());
+            alice.giveResource(new BrickCard());
+        }
+        return alice;
+    }
+
+    @Test
+    public void clearTest2() {
+        Board.reset();
+        Player alice = aliceRoad(2);
+        assertEquals(15, alice.numRoads());
+        Board.placeRoad(new Road(Color.red()), 1, 5);
+        alice.placeRoad(1, 0);
+        assertEquals(14, alice.numRoads());
+        Board.clear();
+        assertEquals(15, alice.numRoads());
+        System.out.println(Board.dump());
     }
 
 }

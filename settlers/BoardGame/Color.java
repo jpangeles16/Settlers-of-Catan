@@ -1,5 +1,3 @@
-import afu.org.checkerframework.checker.oigj.qual.O;
-
 import java.util.ArrayList;
 
 /** A class that you cannot instantiate. It
@@ -19,22 +17,22 @@ class Color {
     private Color() {}
 
     /** Returns the unique color black. */
-    static Color Black() {
+    static Color black() {
         return _colors.get(0);
     }
 
     /** Returns the unique color white. */
-    static Color White() {
+    static Color white() {
         return _colors.get(1);
     }
 
     /** Returns the unique color orange. */
-    static Color Orange() {
+    static Color orange() {
         return _colors.get(2);
     }
 
     /** Returns the unique color red. */
-    static Color Red() {
+    static Color red() {
         return _colors.get(3);
     }
 
@@ -68,25 +66,16 @@ class Color {
     }
 
     /** The color black. */
-    private final static class Black extends Color {
-
-    }
+    final private static class Black extends Color { }
 
     /** The color white. */
-    private final static class White extends Color {
-
-
-    }
+    final private static class White extends Color { }
 
     /** The color orange. */
-    private final static class Orange extends Color {
-
-    }
+    final private static class Orange extends Color { }
 
     /** The color red. */
-    private final static class Red extends Color {
-
-    }
+    final private static class Red extends Color { }
 
     /** Returns true if I am taken by a player. */
     private boolean _taken;

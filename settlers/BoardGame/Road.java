@@ -2,13 +2,41 @@
  * @author John Angeles
  */
 class Road {
+
     /** Initializes an unplaced road with a certain color. */
     Road(Color color) {
         assert Color.VALID_COLORS.contains(color)
                 : "Invalid color!";
         _color = color;
-        _isPlaced = false;
+    }
 
+    /** Initializes an unplaced road that belongs to a
+     * certain player. */
+    Road(Color color, Player player) {
+        this(color);
+        _player = player;
+    }
+
+    /** Returns me to my player that owns me.
+     * This function assumes that I have already been removed
+     * from the hex that I have been on.
+     */
+    void returnToPlayer() {
+        if (player() != null) {
+            player().takeBackRoad(this);
+        }
+    }
+
+    /** Returns my color. */
+    Color color() {
+        return _color;
+    }
+
+    /** Returns the player that owns me, or null if I am not
+     * owned by anyone.
+     */
+    Player player() {
+        return _player;
     }
 
     @Override
@@ -20,7 +48,7 @@ class Road {
     /** My color. */
     private Color _color;
 
-    /** True if I am placed on the board. */
-    private boolean _isPlaced;
+    /** My player that I belong to. */
+    private Player _player;
 
 }
