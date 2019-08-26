@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcac568-4023-48ea-9725-1715a4d8c85e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Player.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+            <state relative-caret-position="437">
+              <caret line="160" column="13" lean-forward="true" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1689#1690#0" expanded="true" />
@@ -55,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1209">
-              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+            <state relative-caret-position="1620">
+              <caret line="108" column="19" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1309#1310#0" expanded="true" />
@@ -74,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardGame/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1617">
+            <state relative-caret-position="3375">
               <caret line="225" column="29" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -141,8 +139,10 @@
       <find>5, 0</find>
       <find>private</find>
       <find>5,</find>
-      <find>dump</find>
       <find>place</find>
+      <find>isvalidroad</find>
+      <find>dump</find>
+      <find>has</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -365,7 +365,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15593705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15593705" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -375,7 +375,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.80361444" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22409639" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.22409639" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -633,29 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1127">
-          <caret line="297" column="30" selection-start-line="297" selection-start-column="30" selection-end-line="297" selection-end-column="30" />
-          <folding>
-            <element signature="e#1827#1828#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
-            <element signature="e#2243#2244#0" expanded="true" />
-            <element signature="e#2275#2276#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2355#2356#0" expanded="true" />
-            <element signature="e#2956#2957#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-            <element signature="e#4879#4880#0" expanded="true" />
-            <element signature="e#4925#4926#0" expanded="true" />
-            <element signature="e#6199#6200#0" expanded="true" />
-            <element signature="e#6241#6242#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/HexTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3120">
@@ -711,6 +688,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/Hex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2994">
+          <caret line="297" column="30" selection-start-line="297" selection-start-column="30" selection-end-line="297" selection-end-column="30" />
+          <folding>
+            <element signature="e#1827#1828#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1936#1937#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2355#2356#0" expanded="true" />
+            <element signature="e#2956#2957#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#4879#4880#0" expanded="true" />
+            <element signature="e#4925#4926#0" expanded="true" />
+            <element signature="e#6199#6200#0" expanded="true" />
+            <element signature="e#6241#6242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
@@ -730,7 +730,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1617">
+        <state relative-caret-position="3375">
           <caret line="225" column="29" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -752,28 +752,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="160" column="13" lean-forward="true" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1209">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        <state relative-caret-position="1620">
+          <caret line="108" column="19" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1309#1310#0" expanded="true" />
             <element signature="e#1333#1334#0" expanded="true" />
             <element signature="e#1311#1312#0" expanded="true" />
             <element signature="e#1347#1348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>

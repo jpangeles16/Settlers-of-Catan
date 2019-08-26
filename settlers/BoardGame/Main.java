@@ -152,8 +152,13 @@ public class Main {
         }
         while (true) {
             System.out.println("Player " + playerID + ", place down your road!");
+            System.out.println("First, please pick a hex where you already have a settlement placed.");
             String input = _console.nextLine();
-            for (int i = 0; i < )
+            int intInput = Integer.parseInt(input);
+            if (!(1 <= intInput && intInput <= 19)) {
+                System.out.println("Please pick a number between 1 and 19!");
+                continue;
+            }
         }
 
 
