@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.regex.Pattern;
 /** Starts the game up
 @author John Angeles
  */
@@ -50,7 +51,7 @@ public class Main {
         // Then, name all of the players
         namePlayers();
         // Finally, take turns placing settlements
-        placeSettlements();
+        placeSettlementsAndRoads();
     }
 
     /** Displays the board.
@@ -108,6 +109,13 @@ public class Main {
         }
     }
 
+    /** We begin by placing settlements from Player 1 to Player 4, and then Player 4 back to Player 1.
+     */
+    private static void placeSettlementsAndRoads() {
+        System.out.println(_player1.getName() + ", place down your road!");
+
+    }
+
     /** Whenever the player types in 'quit', asks the player if they want to quit. Returns nothing
      * if the user did not want to quit.
      */
@@ -126,7 +134,30 @@ public class Main {
         }
     }
 
-    /** Whenever
+    /** Calls player with ID playterID to place road.
+     */
+    private static void placeRoad(int playerID) {
+        if (!(1 <= playerID && playerID <= 4)) {
+            throw new IllegalArgumentException();
+        }
+        Player player = null;
+        if (playerID == 1) {
+            player = _player1;
+        } else if (playerID == 2) {
+            player = _player2;
+        } else if (playerID == 3) {
+            player = _player3;
+        } else {
+            player = _player4;
+        }
+        while (true) {
+            System.out.println("Player " + playerID + ", place down your road!");
+            String input = _console.nextLine();
+            for (int i = 0; i < )
+        }
+
+
+    }
 
     /* The players.
      */

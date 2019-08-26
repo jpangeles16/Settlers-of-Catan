@@ -41,7 +41,13 @@ public class Player {
         for (int i = 0; i < 4; i += 1) {
             _cities.push(new City(_color, this));
         }
+    }
 
+    /** Returns my name.
+     * @return My name.
+     */
+    String getName() {
+        return _name;
     }
 
     /** Returns the number of roads I have yet to place. */

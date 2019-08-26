@@ -2,49 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcac568-4023-48ea-9725-1715a4d8c85e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BoardGame/BoardTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/BrickCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/DevelopmentCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/OreCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/PlayerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/ResourceCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/SheepCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/UnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/WheatCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardGame/WoodCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/BuildingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/BuildingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/ColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/ColorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/EdgeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/EdgeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Hex.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Hex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/HexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/HexTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardGame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Road.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Settlement.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Settlement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Building.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/BuildingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/BuildingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Color$Black.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Color$Black.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Color$Orange.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Color$Orange.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Color$Red.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Color$Red.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Color$White.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Color$White.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/ColorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/ColorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/EdgeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/EdgeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Hex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Hex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/HexTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/HexTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Road.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Road.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/settlers/Settlement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/settlers/Settlement.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,9 +44,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+            <state relative-caret-position="303">
+              <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#1689#1690#0" expanded="true" />
                 <element signature="e#1736#1737#0" expanded="true" />
               </folding>
@@ -97,10 +58,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
-              <caret line="76" column="37" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="37" />
+            <state relative-caret-position="-1209">
+              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1309#1310#0" expanded="true" />
+                <element signature="e#1333#1334#0" expanded="true" />
                 <element signature="e#1311#1312#0" expanded="true" />
                 <element signature="e#1347#1348#0" expanded="true" />
               </folding>
@@ -111,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoardGame/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
+            <state relative-caret-position="-1617">
               <caret line="225" column="29" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -220,11 +183,11 @@
         <option value="$PROJECT_DIR$/BoardGame/Board.java" />
         <option value="$PROJECT_DIR$/BoardGame/Hex.java" />
         <option value="$PROJECT_DIR$/BoardGame/Road.java" />
-        <option value="$PROJECT_DIR$/BoardGame/Player.java" />
         <option value="$PROJECT_DIR$/BoardGame/HexTest.java" />
         <option value="$PROJECT_DIR$/BoardGame/EdgeTest.java" />
         <option value="$PROJECT_DIR$/BoardGame/UnitTest.java" />
         <option value="$PROJECT_DIR$/BoardGame/BoardTest.java" />
+        <option value="$PROJECT_DIR$/BoardGame/Player.java" />
         <option value="$PROJECT_DIR$/BoardGame/Main.java" />
       </list>
     </option>
@@ -402,7 +365,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28040057" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15593705" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -412,7 +375,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.80361444" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3686747" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22409639" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -477,12 +440,6 @@
           <line>50</line>
           <properties />
           <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BoardGame/Main.java</url>
-          <line>98</line>
-          <properties />
-          <option name="timeStamp" value="91" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -773,7 +730,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
+        <state relative-caret-position="-1617">
           <caret line="225" column="29" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -797,10 +754,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
-          <caret line="76" column="37" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="37" />
+        <state relative-caret-position="-1209">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
             <element signature="e#1311#1312#0" expanded="true" />
             <element signature="e#1347#1348#0" expanded="true" />
           </folding>
@@ -809,9 +768,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BoardGame/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+        <state relative-caret-position="303">
+          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1689#1690#0" expanded="true" />
             <element signature="e#1736#1737#0" expanded="true" />
           </folding>
